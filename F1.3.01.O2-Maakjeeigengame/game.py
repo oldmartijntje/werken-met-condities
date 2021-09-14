@@ -1,8 +1,19 @@
-import os.path
-import os
-input = input(">>>").split('.',1)
-if input[0] == "load":
-    if os.path.isfile(input[1]+".txt"):
-        receipt = open(input[1]+".txt", "a")
-    else:
-        receipt = open(input[1]+".txt", "x")
+def game(rollen):
+    rolle={0,1,1,0,0,1,0,0,0,1,0,2,0,0,1,0}
+    from random import randrange
+    shuffle = (randrange(16))
+    playerrol = rolle[shuffle]
+
+
+
+startmenu = True
+game = True
+while game == True:
+    while startmenu == True:
+        print("welkom bij weerwolven startmenu")
+        print("start, help of stop")
+        menu1 = input("")
+        if menu1 != "stop" and menu1 != "start" and menu1 != "help":
+            print("u moet een optie kiezen")
+        else:
+            startmenu = False
