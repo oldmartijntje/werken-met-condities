@@ -17,7 +17,7 @@ while loop == True:
         funnyanswer += 1
         irritation += 1
     elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer >= 55:
-        print("get a life, u did say 'enter' 55 times.")
+        print("get a life, u said 'enter' 55 times.")
         sad = 100
         time.sleep(2 / textspeed)
     elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer > 6:
