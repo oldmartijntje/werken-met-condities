@@ -145,6 +145,7 @@ def path1(irritation, textspeed, cringe):
                             achievement.write("\n |Thanos would learn from this| " +str(datetime.datetime.now()))
                             achievement.close()
                             know.truncate(0)
+                            know.seek(0)
                             check[0]= True
                             for line in check:
                                 know.write(str(line) + ";")
@@ -191,6 +192,7 @@ def path1(irritation, textspeed, cringe):
                     achievement.write("\n |Is this a Marvel crossover??| "  +str(datetime.datetime.now()))
                     achievement.close()
                     know.truncate(0)
+                    know.seek(0)
                     check[1]= True
                     for line in check:
                         know.write(str(line) + ";")
@@ -265,6 +267,7 @@ def path1(irritation, textspeed, cringe):
                 achievement.write("\n |dead in lambourgini| " +str(datetime.datetime.now()))
                 achievement.close()
                 know.truncate(0)
+                know.seek(0)
                 check[2]= True
                 for line in check:
                     know.write(str(line) + ";")
@@ -288,6 +291,7 @@ def path1(irritation, textspeed, cringe):
                 achievement.write("\n |being hot AF| "  +str(datetime.datetime.now()))
                 achievement.close()
                 know.truncate(0)
+                know.seek(0)
                 check[3]= True
                 for line in check:
                     know.write(str(line) + ";")
@@ -326,308 +330,318 @@ def path1(irritation, textspeed, cringe):
             time.sleep(5 / textspeed)
     print("you are alone on the streets.")
     time.sleep(3 / textspeed)
-    if irritation >= 5 or irritation == -1:
-        print("u see an advertisement")
-        time.sleep(3 / textspeed)
-        print("u decide to take a look.")
-        time.sleep(4 / textspeed)
-        print("it's an job offer as circus director")
-        time.sleep(4 / textspeed)
-        print("do you take the offer?")
-        time.sleep(5 / textspeed)
-        loop = True
-        while loop == True:
-            print("what do you do?")
-            input1 = input(">>>").split('.',1)
-            if input1[0] == "speed":
-                textspeed = float(input1[1])
-                print(f"someGoodSpeedChangeFeedback {textspeed}")
-            elif "yes" in input1[0] or "take" in input1[0]:
-                print("okay")
-                import dontrunthistoo
-                try:
-                    dontrunthistoo()
-                except:
-                    e=4
-                
-            elif "no" in input1[0] or "don't" in input1[0]:
-                print("you start walking toward a girl")
-                time.sleep(5 / textspeed)
-                loop2 = True
-                while loop2 == True:
-                    print("do you want to interact with her?")
-                    input1 = input(">>>").split('.',1)
-                    if input1[0] == "speed":
-                        textspeed = float(input1[1])
-                        print(f"someGoodSpeedChangeFeedback {textspeed}")
-                    elif "yes" in input1[0] or "interact" in input1[0]:
-                        print("you walk up to the girl and say hi")
-                        time.sleep(3 / textspeed)
-                        print("the girl looks at you")
-                        time.sleep(3 / textspeed)
-                        loop1 = True
-                        while loop1 == True:
-                            print("what do you want to do?")
-                            input1 = input(">>>").split('.',1)
-                            if input1[0] == "speed":
-                                textspeed = float(input1[1])
-                                print(f"someGoodSpeedChangeFeedback {textspeed}")
-                            elif "talk" in input1[0] or "conversation" in input1[0]:
-                                print("you try and have a conversation...")
-                                time.sleep(3 / textspeed)
-                                print("she hits you with her handbag")
-                                time.sleep(3 / textspeed)
-                                print("'You dare to talk to me mortal?'")
-                                time.sleep(3 / textspeed)
-                                print("the girl snaps your neck")
-                                time.sleep(3 / textspeed)
-                                print("[u died]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[4] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |hmm sexual herrasment?| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[4]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            elif "steal" in input1[0] or "rob" in input1[0]:
-                                print("you grab onto her handbag")
-                                time.sleep(3 / textspeed)
-                                print("she tries to kick you but she fails and lets go of the handbag")
-                                time.sleep(3 / textspeed)
-                                print("you start to run away")
-                                time.sleep(2 / textspeed)
-                                print("you hear a beep coming from the handbag")
-                                time.sleep(3 / textspeed)
-                                print("you open it and see 2 things")
-                                time.sleep(3 / textspeed)
-                                print("the first thing is a paper that reads:")
-                                time.sleep(3 / textspeed)
-                                print("job offer as Circusdirector for circus HotelDeBotel")
-                                time.sleep(3 / textspeed)
-                                print("the other thing is a bomb")
-                                time.sleep(3 / textspeed)
-                                print("the bomb explodes!")
-                                print("[u died]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[5] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(2)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |that poor women| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[5]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
+    
+    print("u see an advertisement")
+    time.sleep(3 / textspeed)
+    print("u decide to take a look.")
+    time.sleep(4 / textspeed)
+    print("it's an job offer as circus director")
+    time.sleep(4 / textspeed)
+    print("do you take the offer?")
+    time.sleep(5 / textspeed)
+    loop = True
+    while loop == True:
+        print("what do you do?")
+        input1 = input(">>>").split('.',1)
+        if input1[0] == "speed":
+            textspeed = float(input1[1])
+            print(f"someGoodSpeedChangeFeedback {textspeed}")
+        elif "yes" in input1[0] or "take" in input1[0]:
+            print("okay")
+            import dontrunthistoo
+            try:
+                dontrunthistoo()
+            except:
+                e=4
+            
+        elif "no" in input1[0] or "don't" in input1[0]:
+            print("you start walking toward a girl")
+            time.sleep(5 / textspeed)
+            loop2 = True
+            while loop2 == True:
+                print("do you want to interact with her?")
+                input1 = input(">>>").split('.',1)
+                if input1[0] == "speed":
+                    textspeed = float(input1[1])
+                    print(f"someGoodSpeedChangeFeedback {textspeed}")
+                elif "yes" in input1[0] or "interact" in input1[0]:
+                    print("you walk up to the girl and say hi")
+                    time.sleep(3 / textspeed)
+                    print("the girl looks at you")
+                    time.sleep(3 / textspeed)
+                    loop1 = True
+                    while loop1 == True:
+                        print("what do you want to do?")
+                        input1 = input(">>>").split('.',1)
+                        if input1[0] == "speed":
+                            textspeed = float(input1[1])
+                            print(f"someGoodSpeedChangeFeedback {textspeed}")
+                        elif "talk" in input1[0] or "conversation" in input1[0]:
+                            print("you try and have a conversation...")
+                            time.sleep(3 / textspeed)
+                            print("she hits you with her handbag")
+                            time.sleep(3 / textspeed)
+                            print("'You dare to talk to me mortal?'")
+                            time.sleep(3 / textspeed)
+                            print("the girl snaps your neck")
+                            time.sleep(3 / textspeed)
+                            print("[u died]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[4] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |hmm sexual herrasment?| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[4]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        elif "steal" in input1[0] or "rob" in input1[0]:
+                            print("you grab onto her handbag")
+                            time.sleep(3 / textspeed)
+                            print("she tries to kick you but she fails and lets go of the handbag")
+                            time.sleep(3 / textspeed)
+                            print("you start to run away")
+                            time.sleep(2 / textspeed)
+                            print("you hear a beep coming from the handbag")
+                            time.sleep(3 / textspeed)
+                            print("you open it and see 2 things")
+                            time.sleep(3 / textspeed)
+                            print("the first thing is a paper that reads:")
+                            time.sleep(3 / textspeed)
+                            print("job offer as Circusdirector for circus HotelDeBotel")
+                            time.sleep(3 / textspeed)
+                            print("the other thing is a bomb")
+                            time.sleep(3 / textspeed)
+                            print("the bomb explodes!")
+                            print("[u died]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[5] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(2)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |that poor women| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[5]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        
                             
-                                
-                            elif "dance" in input1[0]:
-                                print("U decided to do a fortnite dance for some reason")
-                                time.sleep(2 / textspeed)
-                                cringe += 1
-                                print("she pickaxed you to death")
-                                print("[u died]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[6] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |there is a time for everything, but not now| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[6]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            elif "dab" in input1[0] and cringe <= 2:
-                                print("u decided to dab, i should get this feature removed")
-                                cringe += 1
-                                time.sleep(3 / textspeed)
-                                print("[u died from cringe]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[7] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |dabbing when it's not 2016 anymore?| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[7]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            elif "dab" in input1[0] and cringe == 3:
-                                print("u decided to dab, i am going to remove this feature")
-                                cringe += 1
-                                time.sleep(3 / textspeed)
-                                print("[u died from cringe]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[8] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |not cool man, not cool| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[8]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            elif "dab" in input1[0] and cringe == 4:
-                                print("u decided to dab, haha it's deleted now")
-                                cringe += 3
-                                time.sleep(1 / textspeed)
-                                print("[u died from cringe]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[9] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |u died from cringe| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[9]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            elif "dab" in input1[0] and cringe == 5:
-                                print("u decided to dab, dangit, now it should be deleted")
-                                cringe += 3
-                                time.sleep(1 / textspeed)
-                                print("[u died from cringe]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[10] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |u made him delete the dab| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[10]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            elif "die" in input1[0]:
-                                print("as you wish")
-                                time.sleep(2 / textspeed)
-                                print("[u died]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[11] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |as u wish my friend| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[11]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            elif "yeet" in input1[0]:
-                                print("she yeeted you instead")
-                                time.sleep(2 / textspeed)
-                                print("[u died]")
-                                know = open("knowledge.txt", "r+")
-                                check = know.read().split(";")
-                                if check[12] != "True":
-                                    print("(there is an achievement added to achievements.txt)")
-                                    time.sleep(1)
-                                    achievement=open("achievements.txt", "a+")
-                                    achievement.write("\n |YEET| " +str(datetime.datetime.now()))
-                                    achievement.close()
-                                    know.truncate(0)
-                                    check[12]= True
-                                    for line in check:
-                                        know.write(str(line) + ";")
-                                    know.close()
-                                save(irritation,textspeed,cringe)
-                                exit()
-                            else:
-                                print("i didn't get that, please be clearer, keywords like 'talk' and 'dab' and 'steal' will work")
-                                time.sleep(5 / textspeed)
-                    elif "no" in input1[0] or "don't" in input1[0]:
-                        print("you try to walk away")
-                        time.sleep(4 / textspeed)
-                        print("you trip over a loose stone")
-                        time.sleep(2 / textspeed)
-                        print("[u died]")
-                        know = open("knowledge.txt", "r+")
-                        check = know.read().split(";")
-                        if check[13] != "True":
-                            print("(there is an achievement added to achievements.txt)")
-                            time.sleep(1)
-                            achievement=open("achievements.txt", "a+")
-                            achievement.write("\n |YEET| " +str(datetime.datetime.now()))
-                            achievement.close()
-                            know.truncate(0)
-                            check[13]= True
-                            for line in check:
-                                know.write(str(line) + ";")
-                            know.close()
-                        save(irritation,textspeed,cringe)
-                        exit()
-                    elif "dance" in input1[0]:
-                        print("U decided to do a fortnite dance for some reason")
-                        time.sleep(2 / textspeed)
-                        cringe += 1
-                        print("100 precent cringe")
-                    elif "dab" in input1[0] and cringe <= 2:
-                        print("u decided to dab, i should get this feature removed")
-                        cringe += 1
-                        time.sleep(3 / textspeed)
-                    elif "dab" in input1[0] and cringe == 3:
-                        print("u decided to dab, i am going to remove this feature")
-                        cringe += 1
-                        time.sleep(3 / textspeed)
-                    elif "dab" in input1[0] and cringe == 4:
-                        print("u decided to dab, haha it's deleted now")
-                        cringe += 3
-                        time.sleep(1 / textspeed)
-                    elif "dab" in input1[0] and cringe == 5:
-                        print("u decided to dab, dangit, now it should be deleted")
-                        cringe += 3
-                        time.sleep(1 / textspeed)
-                    elif "die" in input1[0]:
-                        print("no")
-                        time.sleep(2 / textspeed)
-                    elif "yeet" in input1[0]:
-                        print("no, there is nothing to yeet")
-                        time.sleep(2 / textspeed)
-                    else:
-                        print("i didn't get that, please be clearer, keywords like 'don't' and 'interact' and 'die' will work")
-                        time.sleep(5 / textspeed)
-            else:
-                print("that's not a valid answer, what about a command like 'yes' or 'yeet' or 'no,' that should work")
+                        elif "dance" in input1[0]:
+                            print("U decided to do a fortnite dance for some reason")
+                            time.sleep(2 / textspeed)
+                            cringe += 1
+                            print("she pickaxed you to death")
+                            print("[u died]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[6] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |there is a time for everything, but not now| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[6]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        elif "dab" in input1[0] and cringe <= 2:
+                            print("u decided to dab, i should get this feature removed")
+                            cringe += 1
+                            time.sleep(3 / textspeed)
+                            print("[u died from cringe]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[7] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |dabbing when it's not 2016 anymore?| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[7]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        elif "dab" in input1[0] and cringe == 3:
+                            print("u decided to dab, i am going to remove this feature")
+                            cringe += 1
+                            time.sleep(3 / textspeed)
+                            print("[u died from cringe]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[8] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |not cool man, not cool| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[8]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        elif "dab" in input1[0] and cringe == 4:
+                            print("u decided to dab, haha it's deleted now")
+                            cringe += 3
+                            time.sleep(1 / textspeed)
+                            print("[u died from cringe]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[9] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |u died from cringe| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[9]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        elif "dab" in input1[0] and cringe == 5:
+                            print("u decided to dab, dangit, now it should be deleted")
+                            cringe += 3
+                            time.sleep(1 / textspeed)
+                            print("[u died from cringe]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[10] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |u made him delete the dab| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[10]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        elif "die" in input1[0]:
+                            print("as you wish")
+                            time.sleep(2 / textspeed)
+                            print("[u died]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[11] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |as u wish my friend| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[11]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        elif "yeet" in input1[0]:
+                            print("she yeeted you instead")
+                            time.sleep(2 / textspeed)
+                            print("[u died]")
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[12] != "True":
+                                print("(there is an achievement added to achievements.txt)")
+                                time.sleep(1)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |YEET| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[12]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            save(irritation,textspeed,cringe)
+                            exit()
+                        else:
+                            print("i didn't get that, please be clearer, keywords like 'talk' and 'dab' and 'steal' will work")
+                            time.sleep(5 / textspeed)
+                elif "no" in input1[0] or "don't" in input1[0]:
+                    print("you try to walk away")
+                    time.sleep(4 / textspeed)
+                    print("you trip over a loose stone")
+                    time.sleep(2 / textspeed)
+                    print("[u died]")
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[13] != "True":
+                        print("(there is an achievement added to achievements.txt)")
+                        time.sleep(1)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |YEET| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[13]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                    save(irritation,textspeed,cringe)
+                    exit()
+                elif "dance" in input1[0]:
+                    print("U decided to do a fortnite dance for some reason")
+                    time.sleep(2 / textspeed)
+                    cringe += 1
+                    print("100 precent cringe")
+                elif "dab" in input1[0] and cringe <= 2:
+                    print("u decided to dab, i should get this feature removed")
+                    cringe += 1
+                    time.sleep(3 / textspeed)
+                elif "dab" in input1[0] and cringe == 3:
+                    print("u decided to dab, i am going to remove this feature")
+                    cringe += 1
+                    time.sleep(3 / textspeed)
+                elif "dab" in input1[0] and cringe == 4:
+                    print("u decided to dab, haha it's deleted now")
+                    cringe += 3
+                    time.sleep(1 / textspeed)
+                elif "dab" in input1[0] and cringe == 5:
+                    print("u decided to dab, dangit, now it should be deleted")
+                    cringe += 3
+                    time.sleep(1 / textspeed)
+                elif "die" in input1[0]:
+                    print("no")
+                    time.sleep(2 / textspeed)
+                elif "yeet" in input1[0]:
+                    print("no, there is nothing to yeet")
+                    time.sleep(2 / textspeed)
+                else:
+                    print("i didn't get that, please be clearer, keywords like 'don't' and 'interact' and 'die' will work")
+                    time.sleep(5 / textspeed)
+        else:
+            print("that's not a valid answer, what about a command like 'yes' or 'yeet' or 'no,' that should work")
 def path2(irritation, textspeed, cringe):
     loop = True
     while loop == True:
@@ -706,6 +720,7 @@ def path2(irritation, textspeed, cringe):
                 achievement.write("\n |You tried to escape| " +str(datetime.datetime.now()))
                 achievement.close()
                 know.truncate(0)
+                know.seek(0)
                 check[14]= True
                 for line in check:
                     know.write(str(line) + ";")
@@ -835,6 +850,7 @@ def path2(irritation, textspeed, cringe):
         achievement.write("\n |Do i dare to reopen it?| " +str(datetime.datetime.now()))
         achievement.close()
         know.truncate(0)
+        know.seek(0)
         check[15]= True
         for line in check:
             know.write(str(line) + ";")
@@ -895,6 +911,7 @@ def reopen(irritation, textspeed, cringe):
             achievement.write("\n |the good guy :)| " +str(datetime.datetime.now()))
             achievement.close()
             know.truncate(0)
+            know.seek(0)
             check[16]= True
             for line in check:
                 know.write(str(line) + ";")
@@ -951,6 +968,7 @@ def reopen(irritation, textspeed, cringe):
                         achievement.write("\n |you became the bad guy| " +str(datetime.datetime.now()))
                         achievement.close()
                         know.truncate(0)
+                        know.seek(0)
                         check[17]= True
                         for line in check:
                             know.write(str(line) + ";")
@@ -1035,6 +1053,7 @@ def reopen(irritation, textspeed, cringe):
                         achievement.write("\n |i am bad| " +str(datetime.datetime.now()))
                         achievement.close()
                         know.truncate(0)
+                        know.seek(0)
                         check[18]= True
                         for line in check:
                             know.write(str(line) + ";")
@@ -1066,6 +1085,7 @@ def reopen(irritation, textspeed, cringe):
                         achievement.write("\n |you saved him| " +str(datetime.datetime.now()))
                         achievement.close()
                         know.truncate(0)
+                        know.seek(0)
                         check[19]= True
                         for line in check:
                             know.write(str(line) + ";")

@@ -21,10 +21,9 @@ print("+++++++++++++++++++++++++++++++")
 pizza = input("wilt u een pizza bestellen? J/N")
 if pizza == "J" or pizza == "j":
     import doNotRun
-    try:
-        doNotRun()
-    except:
-        e=3
+    
+    doNotRun()
+    
 input("heeft u wel eens de enderdraak verslagen?J/N")
 vraag1 = int(input("hoeveel jaar heeft u praktijkervaring met dieren-dressuur?"))
 vraag2 = int(input("hoeveel jaar heeft u praktijkervaring met jongleren?"))
@@ -69,6 +68,7 @@ if check[22] != "True":
     achievement.write("\n |Hmm i am hungry| " +str(datetime.datetime.now()))
     achievement.close
     know.truncate(0)
+    know.seek(0)
     check[22]= True
     for line in check:
         know.write(str(line) + ";")

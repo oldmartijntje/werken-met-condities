@@ -352,6 +352,7 @@ while loop == True:
                 achievement.write("\n |True Ending !2!| " +str(datetime.datetime.now()))
                 achievement.close
                 know.truncate(0)
+                know.seek(0)
                 check[21]= True
                 for line in check:
                     know.write(str(line) + ";")
