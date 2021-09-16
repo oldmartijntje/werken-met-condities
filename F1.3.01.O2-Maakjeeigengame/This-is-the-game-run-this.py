@@ -74,7 +74,7 @@ def path1(irritation, textspeed, cringe):
             print("no, there is nothing to yeet")
             time.sleep(2 / textspeed)
         else:
-            print("i didn't get that, please be clearer, keywords like 'car' and 'inside' will work")
+            print("i didn't get that, please be clearer, keywords like 'car' and 'back inside' will work")
             time.sleep(5 / textspeed)
     print("you start up the car, the engine starts and you give gas.")
     time.sleep(5 / textspeed)
@@ -138,7 +138,7 @@ def path1(irritation, textspeed, cringe):
                         print("you should be gone any second now, and then i am free...")
                         know = open("knowledge.txt", "r+")
                         check = know.read().split(";")
-                        if check[0] == False:
+                        if check[0] == 'False':
                             print("(there is an achievement added to achievement.txt)")
                             time.sleep(4)
                             achievement=open("achievements.txt", "a+")
@@ -184,7 +184,7 @@ def path1(irritation, textspeed, cringe):
                 print("you should be gone any second now, and then i am free...")
                 know = open("knowledge.txt", "r+")
                 check = know.read().split(";")
-                if check[1] == False:
+                if check[1] == 'False':
                     print("(there is an achievement added to achievement.txt)")
                     time.sleep(4)
                     achievement=open("achievements.txt", "a+")
@@ -258,7 +258,7 @@ def path1(irritation, textspeed, cringe):
             print("[u died]")
             know = open("knowledge.txt", "r+")
             check = know.read().split(";")
-            if check[2] == False:
+            if check[2] == 'False':
                 print("(there is an achievement added to achievements.txt)")
                 time.sleep(1)
                 achievement=open("achievements.txt", "a+")
@@ -281,7 +281,7 @@ def path1(irritation, textspeed, cringe):
             print("[u died] ")
             know = open("knowledge.txt", "r+")
             check = know.read().split(";")
-            if check[3] == False:
+            if check[3] == 'False':
                 print("(there is an achievement added to achievements.txt)")
                 time.sleep(1)
                 achievement=open("achievements.txt", "a+")
@@ -384,7 +384,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[4] == False:
+                                if check[4] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -418,7 +418,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[5] == False:
+                                if check[5] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(2)
                                     achievement=open("achievements.txt", "a+")
@@ -441,7 +441,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[6] == False:
+                                if check[6] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -461,7 +461,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died from cringe]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[7] == False:
+                                if check[7] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -481,7 +481,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died from cringe]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[8] == False:
+                                if check[8] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -501,7 +501,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died from cringe]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[9] == False:
+                                if check[9] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -521,7 +521,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died from cringe]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[10] == False:
+                                if check[10] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -540,7 +540,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[11] == False:
+                                if check[11] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -559,7 +559,7 @@ def path1(irritation, textspeed, cringe):
                                 print("[u died]")
                                 know = open("knowledge.txt", "r+")
                                 check = know.read().split(";")
-                                if check[12] == False:
+                                if check[12] == 'False':
                                     print("(there is an achievement added to achievements.txt)")
                                     time.sleep(1)
                                     achievement=open("achievements.txt", "a+")
@@ -583,7 +583,7 @@ def path1(irritation, textspeed, cringe):
                         print("[u died]")
                         know = open("knowledge.txt", "r+")
                         check = know.read().split(";")
-                        if check[13] == False:
+                        if check[13] == 'False':
                             print("(there is an achievement added to achievements.txt)")
                             time.sleep(1)
                             achievement=open("achievements.txt", "a+")
@@ -699,7 +699,7 @@ def path2(irritation, textspeed, cringe):
             beingNice = 1
             know = open("knowledge.txt", "r+")
             check = know.read().split(";")
-            if check[14] == False:
+            if check[14] == 'False':
                 print("(there is an achievement added to achievement.txt)")
                 time.sleep(4)
                 achievement=open("achievements.txt", "a+")
@@ -828,7 +828,7 @@ def path2(irritation, textspeed, cringe):
     time.sleep(4 / textspeed)
     know = open("knowledge.txt", "r+")
     check = know.read().split(";")
-    if check[15] == False:
+    if check[15] == 'False':
         print("(there is an achievement added to achievement.txt)")
         time.sleep(4)
         achievement=open("achievements.txt", "a+")
@@ -888,7 +888,7 @@ def reopen(irritation, textspeed, cringe):
         time.sleep(6 / textspeed)
         know = open("knowledge.txt", "r+")
         check = know.read().split(";")
-        if check[16] == False:
+        if check[16] == 'False':
             print("(there is an achievement added to achievement.txt)")
             time.sleep(3)
             achievement=open("achievements.txt", "a+")
@@ -944,7 +944,7 @@ def reopen(irritation, textspeed, cringe):
                     loop = False
                     know = open("knowledge.txt", "r+")
                     check = know.read().split(";")
-                    if check[17] == False:
+                    if check[17] == "False":
                         print("(there is an achievement added to achievement.txt)")
                         time.sleep(1)
                         achievement =open("achievements.txt", "a+")
@@ -1028,7 +1028,7 @@ def reopen(irritation, textspeed, cringe):
                     loop = False
                     know = open("knowledge.txt", "r+")
                     check = know.read().split(";")
-                    if check[18] == False:
+                    if check[18] == "False":
                         print("(there is an achievement added to achievement.txt)")
                         time.sleep(1)
                         achievement=open("achievements.txt", "a+")
@@ -1059,7 +1059,7 @@ def reopen(irritation, textspeed, cringe):
                     print("you start debugging him")
                     know = open("knowledge.txt", "r+")
                     check = know.read().split(";")
-                    if check[19] == False:
+                    if check[19] == "False":
                         print("(there is an achievement added to achievement.txt)")
                         time.sleep(1)
                         achievement=open("achievements.txt", "a+")
