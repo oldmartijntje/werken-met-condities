@@ -62,7 +62,7 @@ elif vraag7 == "v" or vraag7 == "V":
         print("Nope, u bent niet in aanmerking gekomen voor deze beroepspositie.")
 know = open("knowledge.txt", "r+")
 check = know.read().split(";")
-if check[22] == 'False':
+if check[22] != "True":
     print("(there is an achievement added to achievement.txt)")
     time.sleep(4)
     achievement=open("achievements.txt", "a+")

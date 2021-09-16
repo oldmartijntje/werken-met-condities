@@ -345,7 +345,7 @@ while loop == True:
             loop = False
             know = open("knowledge.txt", "r+")
             check = know.read().split(";")
-            if check[21] == 'False':
+            if check[21] != "True":
                 print("(there is an achievement added to achievement.txt)")
                 time.sleep(3)
                 achievement=open("achievements.txt", "a+")
