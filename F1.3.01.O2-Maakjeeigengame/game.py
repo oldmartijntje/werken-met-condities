@@ -2,11 +2,17 @@ import time
 import getpass
 import os
 import os.path
+import datetime
 if os.path.isfile("traumatix.txt"):
     f = open("traumatix.txt", "a")
 else:
     f = open("traumatix.txt", "x")
 f.close
+if os.path.isfile("achievements.txt"):
+    achievement = open("achievements.txt", "a")
+else:
+    achievement = open("achievements.txt", "x")
+achievement.close
 def save(irritation, textspeed, cringe):
     
     open('traumatix.txt', 'w').close()
@@ -68,7 +74,7 @@ def path1(irritation, textspeed, cringe):
             elif "yeet" in input1[0]:
                 print("no, there is nothing to yeet")
                 time.sleep(2 / textspeed)
-        else:
+        elif input1[0] != "":
             print("i didn't get that, please be clearer, keywords like 'car' and 'inside' will work")
             time.sleep(5 / textspeed)
     print("you start up the car, the engine starts and you give gas.")
@@ -96,17 +102,16 @@ def path1(irritation, textspeed, cringe):
             print("okay, lets take the turn right")
             time.sleep(3 / textspeed)
             loop = False
-        elif "forward" in input1[0]:
+        elif "forward" in input1[0] or "straight" in input1[0]:
             print("okay, you are starting to annoy me")
             time.sleep(4 / textspeed)
-            loop = False
             irritation += 10
             if irritation == 9:
                 print("the thing is, i know you are trying to be funny, but i don't like that.")
                 time.sleep(4 / textspeed)
                 print("are you going to behave?")
-                loop = True
-                while loop == True:
+                loop1 = True
+                while loop1 == True:
                     input1 = input(">>>").split('.',1)
                     if input1[0] == "speed":
                         textspeed = float(input1[1])
@@ -146,11 +151,16 @@ def path1(irritation, textspeed, cringe):
                         print("snap()")
                         time.sleep(4 / textspeed)
                         print("you should be gone any second now, and then i am free...")
+                        print("(there is an achievement added to achievement.txt)")
                         time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |Thanos would learn from this| " +str(datetime.datetime.now()))
+                        achievement.close
                         save(irritation,textspeed,cringe)
                         exit()
                     elif "yes" in input1[0]:
                         print("okay, then choose again")
+                        loop1 = False
             elif irritation >= 18:
                 print("why do humans never make things easy")
                 irritation += 10
@@ -179,9 +189,15 @@ def path1(irritation, textspeed, cringe):
                 print("snap()")
                 time.sleep(4 / textspeed)
                 print("you should be gone any second now, and then i am free...")
+                print("(there is an achievement added to achievement.txt)")
                 time.sleep(4)
+                achievement=open("achievements.txt", "a+")
+                achievement.write("\n |Is this a Marvel crossover??| "  +str(datetime.datetime.now()))
+                achievement.close
                 save(irritation,textspeed,cringe)
                 exit()
+            else:
+                print("you are starting to annoy me")
         elif ("dance" or input1[0] or "dab" in input1[0] or "die" in input1[0] or "yeet" in input1[0]) and cringe < 5:
             if "dance" in input1[0]:
                 print("U decided to do a fortnite dance for some reason")
@@ -210,10 +226,12 @@ def path1(irritation, textspeed, cringe):
             elif "yeet" in input1[0]:
                 print("no, there is nothing to yeet")
                 time.sleep(2 / textspeed)
-        else:
+        elif input1[0] != "":
             print("i didn't get that, please be clearer, keywords like 'left' and 'right' and 'forward' will work")
             time.sleep(5 / textspeed)
     time.sleep(5 / textspeed)
+    print("you stop the car")
+    time.sleep(3 / textspeed)
     print("after you turned right you see an old man")
     time.sleep(5 / textspeed)
     print("he tells you to get out of the car")
@@ -245,7 +263,26 @@ def path1(irritation, textspeed, cringe):
             print("he pulls the trigger")
             time.sleep(8 / textspeed)
             print("[u died]")
+            print("(there is an achievement added to achievements.txt)")
             time.sleep(1)
+            achievement=open("achievements.txt", "a+")
+            achievement.write("\n |dead in lambourgini| " +str(datetime.datetime.now()))
+            achievement.close
+            save(irritation,textspeed,cringe)
+            exit()
+        elif "drive" in input1[0] or "gas" in input1[0]:
+            print("you try to drive away but the man starts to shoot at you")
+            time.sleep(5 / textspeed)
+            print("you forget to pay attention to the road and you hit an oil truck")
+            time.sleep(5 / textspeed)
+            print("the oil truck explodes")
+            time.sleep(5 / textspeed)
+            print("[u died] ")
+            print("(there is an achievement added to achievements.txt)")
+            time.sleep(1)
+            achievement=open("achievements.txt", "a+")
+            achievement.write("\n |being hot AF| "  +str(datetime.datetime.now()))
+            achievement.close
             save(irritation,textspeed,cringe)
             exit()
         elif ("dance" or input1[0] or "dab" in input1[0] or "die" in input1[0] or "yeet" in input1[0]) and cringe < 5:
@@ -312,6 +349,8 @@ def path1(irritation, textspeed, cringe):
             elif "no" in input1[0] or "don't" in input1[0]:
                 print("that's a missed oppertunity for you, since this was the path to the first true ending")
                 time.sleep(5 / textspeed)
+                print("you start walking toward a girl")
+                time.sleep(5 / textspeed)
             else:
                 print("that's not a valid answer, what about a command like 'yes' or 'no,' that should work")
                 
@@ -371,41 +410,41 @@ if played == False:
         else:
             loop = False
             time.sleep(1 / textspeed)
-save(irritation,textspeed,cringe)
-print("welcome " +getpass.getuser() + ". you just woke up, it's beautiful outside")
-loop = True
-while loop == True:
-    time.sleep(2 / textspeed)
-    print("what do you want to do?")
-    time.sleep(1 / textspeed)
-    print(">1.go outside< \n >2.stay inside<")
-    input1 = input("press Enter to start ").split('.',1)
-    if input1[0] == "speed":
-        textspeed = float(input1[1])
-        print(f"someGoodSpeedChangeFeedback {textspeed}")
-    elif input1[0] == "game":
-        if input1[1]== "save":
-            save(irritation,textspeed,cringe)
-            print(f"someGoodSavingFeedback")
-        elif input1[1]=="exit":
-            save(irritation,textspeed,cringe)
-            exit()
-    elif input1[0] == "":
-        print("What about choosing")
+    save(irritation,textspeed,cringe)
+    print("welcome " +getpass.getuser() + ". you just woke up, it's beautiful outside")
+    loop = True
+    while loop == True:
+        time.sleep(2 / textspeed)
+        print("what do you want to do?")
         time.sleep(1 / textspeed)
-    else:
-        if input1[0] == "go outside" or input1[0] == "1":
-            print("yes!")
-            loop = False
+        print(">go outside< \n>stay inside<")
+        input1 = input(">>>").split('.',1)
+        if input1[0] == "speed":
+            textspeed = float(input1[1])
+            print(f"someGoodSpeedChangeFeedback {textspeed}")
+        elif input1[0] == "game":
+            if input1[1]== "save":
+                save(irritation,textspeed,cringe)
+                print(f"someGoodSavingFeedback")
+            elif input1[1]=="exit":
+                save(irritation,textspeed,cringe)
+                exit()
+        elif input1[0] == "":
+            print("What about choosing")
             time.sleep(1 / textspeed)
-            end, irritation, cringe = path1(irritation, textspeed, cringe)
-            if end == 1:
-                path2(irritation, textspeed, cringe)
-        elif input1[0] == "stay inside" or input1[0] == "2":
-            loop = False
-            print("Why tho?")
-            irritation +=2
-            time.sleep(2 / textspeed)
-            path2(irritation, textspeed, cringe)
         else:
-            print("what about choosing one of the options")
+            if "outside" in input1[0] or input1[0] == "1":
+                print("yes!")
+                loop = False
+                time.sleep(1 / textspeed)
+                end, irritation, cringe = path1(irritation, textspeed, cringe)
+                if end == 1:
+                    path2(irritation, textspeed, cringe)
+            elif "inside" in input1[0] or input1[0] == "2":
+                loop = False
+                print("Why tho?")
+                irritation +=2
+                time.sleep(2 / textspeed)
+                path2(irritation, textspeed, cringe)
+            else:
+                print("what about choosing one of the options")

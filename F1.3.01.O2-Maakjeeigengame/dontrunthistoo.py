@@ -1,4 +1,12 @@
 import time
+import datetime
+import os.path
+import os
+if os.path.isfile("achievements.txt"):
+    achievement = open("achievements.txt", "a")
+else:
+    achievement = open("achievements.txt", "x")
+achievement.close
 vraag9 = 0
 vraag8 = 0
 vraag10 = 0
@@ -49,6 +57,11 @@ elif vraag7 == "v" or vraag7 == "V":
         print("Gefeliciteerd, u bent een goede kanidaat. stuur nu uw cv maar door")
     else:
         print("Nope, u bent nidf in aanmerking gekomen vofd deze bfdzdg.")
+print("(there is an achievement added to achievement.txt)")
+time.sleep(4)
+achievement=open("achievements.txt", "a+")
+achievement.write("\n |Hmm i am hungry| " +str(datetime.datetime.now()))
+achievement.close
 time.sleep(6)
 print("thejzknnl ;fk;s")
 time.sleep(3)

@@ -1,3 +1,13 @@
+import time
+import datetime
+import os.path
+import os
+if os.path.isfile("achievements.txt"):
+    achievement = open("achievements.txt", "a")
+else:
+    achievement = open("achievements.txt", "x")
+achievement.close
+
 #dit berekent de prijs per pizza
 def calculateCosts(dough, pepperoni, cheese, pineapple, ham, tomatosauce, tuna):
     price = 0
@@ -329,6 +339,11 @@ while loop == True:
                 print("okay")
             #zet de loop uit
             loop = False
+            print("(there is an achievement added to achievement.txt)")
+            time.sleep(3)
+            achievement=open("achievements.txt", "a+")
+            achievement.write("\n |True Ending !1!| " +str(datetime.datetime.now()))
+            achievement.close
             print("congrats, this was the true ending! but if u reopen it there might be new things to do")
             input("input to close >>>")
             
