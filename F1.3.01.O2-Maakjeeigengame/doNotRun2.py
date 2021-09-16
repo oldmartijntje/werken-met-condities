@@ -343,11 +343,19 @@ while loop == True:
                 print("okay")
             #zet de loop uit
             loop = False
-            print("(there is an achievement added to achievement.txt)")
-            time.sleep(3)
-            achievement=open("achievements.txt", "a+")
-            achievement.write("\n |True Ending !2!| " +str(datetime.datetime.now()))
-            achievement.close
+            know = open("knowledge.txt", "r+")
+            check = know.read().split(";")
+            if check[21] == False:
+                print("(there is an achievement added to achievement.txt)")
+                time.sleep(3)
+                achievement=open("achievements.txt", "a+")
+                achievement.write("\n |True Ending !2!| " +str(datetime.datetime.now()))
+                achievement.close
+                know.truncate(0)
+                check[21]= True
+                for line in check:
+                    know.write(str(line) + ";")
+                know.close()
             print("congrats, this was the true ending!")
             input("input to close >>>")
             

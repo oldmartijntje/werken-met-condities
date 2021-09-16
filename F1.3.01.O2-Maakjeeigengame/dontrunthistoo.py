@@ -21,7 +21,10 @@ print("+++++++++++++++++++++++++++++++")
 pizza = input("wilt u een pizza bestellen? J/N")
 if pizza == "J" or pizza == "j":
     import doNotRun
-    doNotRun()
+    try:
+        doNotRun()
+    except:
+        e=3
 input("heeft u wel eens de enderdraak verslagen?J/N")
 vraag1 = int(input("hoeveel jaar heeft u praktijkervaring met dieren-dressuur?"))
 vraag2 = int(input("hoeveel jaar heeft u praktijkervaring met jongleren?"))
@@ -56,20 +59,22 @@ elif vraag7 == "v" or vraag7 == "V":
     if (vraag1 > 4 or vraag2 > 5 or vraag3 > 3) and (vraag4 == "J" or vraag4 == "j") and (vraag5 == "J" or vraag5 == "j") and (vraag6 == "J" or vraag6 == "j") and vraag13 > 90 and vraag14 > 150 and (vraag10 == "r" or vraag10=="R") and (vraag11 == "k" or vraag11=="K") and vraag12 >20:
         print("Gefeliciteerd, u bent een goede kanidaat. stuur nu uw cv maar door")
     else:
-        print("Nope, u bent nidf in aanmerking gekomen vofd deze bfdzdg.")
-print("(there is an achievement added to achievement.txt)")
-time.sleep(4)
-achievement=open("achievements.txt", "a+")
-achievement.write("\n |Hmm i am hungry| " +str(datetime.datetime.now()))
-achievement.close
-time.sleep(6)
-print("thejzknnl ;fk;s")
-time.sleep(3)
-print("sjqg kw nqoodjjkmh, xkndgykbh kw stpmf")
-time.sleep(1)
-print("fFkIJ: fij;o;e UfhNMnc jf.,")
-time.sleep(1)
-print("reou fyuanfnmnu84 jnv u9efgdsjbdj dn dada")
+        print("Nope, u bent niet in aanmerking gekomen voor deze beroepspositie.")
+know = open("knowledge.txt", "r+")
+check = know.read().split(";")
+if check[22] == False:
+    print("(there is an achievement added to achievement.txt)")
+    time.sleep(4)
+    achievement=open("achievements.txt", "a+")
+    achievement.write("\n |Hmm i am hungry| " +str(datetime.datetime.now()))
+    achievement.close
+    know.truncate(0)
+    check[22]= True
+    for line in check:
+        know.write(str(line) + ";")
+    know.close()
+print("you die from a heart attack")
+time.sleep(2)
 exit()
 
 
