@@ -114,7 +114,11 @@ pizzaAmount = "startup"
 randomized = "no"
 keepRandomized = "no"
 import os
-
+print("(there is an achievement added to achievement.txt)")
+time.sleep(3)
+achievement=open("achievements.txt", "a+")
+achievement.write("\n |PIZZAAA| " +str(datetime.datetime.now()))
+achievement.close
 #dit is een loop die je blijft vragen of je meer wilt bestellen en of je de menu kaart wilt zien
 while loop == True:
     menukaart = input("do you want to look at the menu? >>>")
@@ -344,7 +348,7 @@ while loop == True:
             achievement=open("achievements.txt", "a+")
             achievement.write("\n |True Ending !2!| " +str(datetime.datetime.now()))
             achievement.close
-            print("congrats, this was the true ending! but if u reopen it there might be new things to do")
+            print("congrats, this was the true ending!")
             input("input to close >>>")
             
             

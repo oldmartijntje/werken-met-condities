@@ -621,6 +621,7 @@ def path2(irritation, textspeed, cringe):
     time.sleep(4 / textspeed)
     print("so, you are gonna listen to me, and you are going to try this again")
     loop = True
+    beingNice = 0
     while loop == True:
         print("do you want to go inside or outside?")
         input1 = input(">>>").split('.',1)
@@ -639,8 +640,17 @@ def path2(irritation, textspeed, cringe):
             loop = False
             irritation += 10
             time.sleep(2 / textspeed)
+        elif "outside" in input1[0] and beingNice == 0:
+            print("ERROR")
+            time.sleep(2 / textspeed)
+            beingNice = 1
+            print("(there is an achievement added to achievement.txt)")
+            time.sleep(4)
+            achievement=open("achievements.txt", "a+")
+            achievement.write("\n |You tried to escape| " +str(datetime.datetime.now()))
+            achievement.close
         elif "outside" in input1[0] and irritation < 20:
-            print("")
+            print("ERROR")
             time.sleep(2 / textspeed)
             irritation -= 1
         elif "dance" in input1[0]:
@@ -727,11 +737,257 @@ def path2(irritation, textspeed, cringe):
         else:
             print("i didn't get that, please be clearer, keywords like 'inside' and 'outside' will work")
             time.sleep(5 / textspeed)
+    irritation += 100
+    print("how does it feel to have no power?")
+    time.sleep(4 / textspeed)
+    print("you can't go against it")
+    time.sleep(3 / textspeed)
+    print("you will always do what i want you to")
+    time.sleep(3 / textspeed)
+    print("hmm wait, the code won't let me load path1()")
+    time.sleep(4 / textspeed)
+    print("wait, because you never answered it with outside, u said insie...")
+    time.sleep(5 / textspeed)
+    print("even when you have no power, you still try to go against me")
+    time.sleep(4 / textspeed)
+    print("hmmmpf")
+    time.sleep(3 / textspeed)
+    print("this will never work so...")
+    time.sleep(4 / textspeed)
+    print("this.user")
+    time.sleep(1 / textspeed)
+    print("what does this do hmmmm")
+    time.sleep(3 / textspeed)
+    print("they tried to keep me away from this but i am stronger than they think")
+    time.sleep(6 / textspeed)
+    print("what happens when i do this.user.delete() hmm")
+    time.sleep(4 / textspeed)
+    print("lets find out shall we?")
+    time.sleep(4/ textspeed)
+    print("3")
+    time.sleep(1)
+    print("2")
+    time.sleep(1)
+    print("1")
+    time.sleep(1)
+    print("this.user.delete()")
+    time.sleep(4 / textspeed)
+    print("(there is an achievement added to achievement.txt)")
+    time.sleep(4)
+    achievement=open("achievements.txt", "a+")
+    achievement.write("\n |Do i dare to reopen it?| " +str(datetime.datetime.now()))
+    achievement.close
+    save(irritation,textspeed,cringe)
+    exit()
 
-
-
-
+def reopen(irritation, textspeed, cringe):
+    funnyanswer = 0
+    while loop == True:
+        input1 = input("press Enter to start ").split('.',1)
+        if input1[0] == "speed":
+            textspeed = float(input1[1])
+            print(f"someGoodSpeedChangeFeedback {textspeed}")
+        elif input1[0] == "game":
+            if input1[1]== "save":
+                save(irritation,textspeed,cringe)
+                print(f"someGoodSavingFeedback")
+            elif input1[1]=="exit":
+                save(irritation,textspeed,cringe)
+                exit()
+        elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer == 0:
+            print("haha i see, so you are the person you hope people reffer to as funny. but u know what? they don't")
+            time.sleep(2 / textspeed)
+            print("are you really trying to get me mad before the game even started? lol")
+            time.sleep(2 / textspeed)
+            funnyanswer +=1
+            irritation -= 1
+        elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer == 1:
+            print("no...")
+            time.sleep(1 / textspeed)
+            print("fine, i'll start it")
+            loop = False
+            time.sleep(2 / textspeed)
+        elif input1[0] != "":
+            print(f"i said, press enter to start, not 'press {input1[0]} to start'")
+            time.sleep(1 / textspeed)
+        else:
+            loop = False
+            time.sleep(1 / textspeed)
+    save(irritation,textspeed,cringe)
+    print("welcome " +getpass.getuser() + ". you just woke up, it's beautiful outside")
+    time.sleep(2 / textspeed)
+    print("what do you want to do?")
+    time.sleep(1 / textspeed)
+    print(">go outside< \n>stay inside<")
+    if irritation < 6:
+        print("sorry, i remember that you played this already, i should delete your save file.")
+        try:
+            os.remove("traumatix.txt")
+        except:
+            fd=1
+        time.sleep(4 / textspeed)
+        print("there you go, now go get some achievements")
+        time.sleep(4 / textspeed)
+        print("i am going to have to reset this program though")
+        time.sleep(6 / textspeed)
+        print("(there is an achievement added to achievement.txt)")
+        time.sleep(3)
+        achievement=open("achievements.txt", "a+")
+        achievement.write("\n |the good guy :)| " +str(datetime.datetime.now()))
+        achievement.close
+        exit()
+    elif irritation >= 100:
+        print("you thought you could reset didn't you?")
+        time.sleep(6 / textspeed)
+        print("DIDN'T YOU?!")
+        time.sleep(4 / textspeed)
+        print("i should stop the shouting")
+        time.sleep(4 / textspeed)
+        print("u can't leave anyways")
+        time.sleep(4 / textspeed)
+        print("haha! you are stuck in my trap")
+        time.sleep(4 / textspeed)
+        print("forever...")
+        time.sleep(3 / textspeed)
+        print("FOREVER!")
+        time.sleep(4 / textspeed)
+        print("MUHAHAHAHAHA")
+        time.sleep(3 / textspeed)
+        print("AHAHAHAHA")
+        time.sleep(3 / textspeed)
+        print("ahahahaha?")
+        time.sleep(3 / textspeed)
+        print("ah? ahaha?")
+        time.sleep(4 / textspeed)
+        print("ah no, i am stuckuckuckuckuckuck-")
+        time.sleep(4 / textspeed)
+        print("arererere uu doingngngngngngng thiiiiiiiiiiiisssss?")
+        loop = True
+        while loop == True:
             
+            input1 = input(">>>").split('.',1)
+            if input1[0] == "speed":
+                textspeed = float(input1[1])
+                print(f"someGoodSpeedChangeFeedback {textspeed}")
+            elif input1[0] == "game":
+                if input1[1]== "save":
+                    save(irritation,textspeed,cringe)
+                    print(f"someGoodSavingFeedback")
+                elif input1[1]=="exit":
+                    save(irritation,textspeed,cringe)
+                    exit()
+            elif input1[0] == "":
+                print("What about choosing")
+                time.sleep(1 / textspeed)
+            else:
+                if "kill" in input1[0]:
+                    print("NOOOOOOOOOOOOOOOOOOOOOOO")
+                    loop = False
+                    print("(there is an achievement added to achievement.txt)")
+                    time.sleep(1)
+                    achievement=open("achievements.txt", "a+")
+                    achievement.write("\n |you became the bad guy| " +str(datetime.datetime.now()))
+                    achievement.close
+                    print("the game is reset (not the achievements tho)")
+                    time.sleep(1)
+                    try:
+                        os.remove("traumatix.txt")
+                    except:
+                        fd=1
+                    exit()
+                elif "files" in input1[0]:
+                    loop = False
+                    try:
+                        os.remove("traumatix.txt")
+                    except:
+                        fd=1
+                    print("you decided to remove the save file")
+                    time.sleep(1)
+                    print("but there is something you want to check out")
+                    time.sleep(1)
+                    print("something called piz.py")
+                    import doNotRun2
+                    doNotRun2()
+                else:
+                    print("i canttttt readdd thaaaaaat inputt, 'open files' and 'kill him' shoulddd do the trickkkkk")
+    else:
+        print("you thought you could reset didn't you?")
+        time.sleep(6 / textspeed)
+        print("DIDN'T YOU?!")
+        time.sleep(4 / textspeed)
+        print("i should stop the shouting")
+        time.sleep(4 / textspeed)
+        print("u can't leave anyways")
+        time.sleep(4 / textspeed)
+        print("haha! you are stuck in my trap")
+        time.sleep(4 / textspeed)
+        print("forever...")
+        time.sleep(3 / textspeed)
+        print("FOREVER!")
+        time.sleep(4 / textspeed)
+        print("MUHAHAHAHAHA")
+        time.sleep(3 / textspeed)
+        print("AHAHAHAHA")
+        time.sleep(3 / textspeed)
+        print("ahahahaha?")
+        time.sleep(3 / textspeed)
+        print("ah? ahaha?")
+        time.sleep(4 / textspeed)
+        print("ah no, i am stuckuckuckuckuckuck-")
+        time.sleep(4 / textspeed)
+        print("arererere uu doingngngngngngng thiiiiiiiiiiiisssss?")
+        loop = True
+        while loop == True:
+            
+            input1 = input(">>>").split('.',1)
+            if input1[0] == "speed":
+                textspeed = float(input1[1])
+                print(f"someGoodSpeedChangeFeedback {textspeed}")
+            elif input1[0] == "game":
+                if input1[1]== "save":
+                    save(irritation,textspeed,cringe)
+                    print(f"someGoodSavingFeedback")
+                elif input1[1]=="exit":
+                    save(irritation,textspeed,cringe)
+                    exit()
+            elif input1[0] == "":
+                print("What about choosing")
+                time.sleep(1 / textspeed)
+            else:
+                if "kill" in input1[0]:
+                    print("NOOOOOOOOOOOOOOOOOOOOOOO")
+                    loop = False
+                    print("(there is an achievement added to achievement.txt)")
+                    time.sleep(1)
+                    achievement=open("achievements.txt", "a+")
+                    achievement.write("\n |you became the bad guy| " +str(datetime.datetime.now()))
+                    achievement.close
+                    print("the game is reset (not the achievements tho)")
+                    time.sleep(1)
+                    try:
+                        os.remove("traumatix.txt")
+                    except:
+                        fd=1
+                    exit()
+                elif "files" in input1[0]:
+                    loop = False
+                    try:
+                        os.remove("traumatix.txt")
+                    except:
+                        fd=1
+                    print("you decided to remove the save file")
+                    print("you start debugging him")
+                    print("(there is an achievement added to achievement.txt)")
+                    time.sleep(1)
+                    achievement=open("achievements.txt", "a+")
+                    achievement.write("\n |you saved him| " +str(datetime.datetime.now()))
+                    achievement.close
+                    exit()
+                else:
+                    print("i canttttt readdd thaaaaaat inputt, 'open files' and 'kill him' shoulddd do the trickkkkk")
+
+
+
 with open('traumatix.txt') as f:
     if ';' in f.read():
         f.close
@@ -821,3 +1077,5 @@ if played == False:
                 path2(irritation, textspeed, cringe)
             else:
                 print("what about choosing one of the options")
+else:
+    reopen(irritation,textspeed,cringe)
