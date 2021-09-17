@@ -857,7 +857,6 @@ def path2(irritation, textspeed, cringe):
         know.close()
     save(irritation,textspeed,cringe)
     exit()
-
 def reopen(irritation, textspeed, cringe):
     funnyanswer = 0
     loop = True
