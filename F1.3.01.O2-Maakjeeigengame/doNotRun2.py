@@ -149,7 +149,7 @@ while loop == True:
     except:
         print("maybe try putting in a number next time")
     if pizzaAmount != "startup":
-        if pizzaAmount >= 0:
+        if pizzaAmount > 0:
 
             #dit blijft herhalen tot het zoveel keer heeft herhaald als het aantal pizza's
             while round <= pizzaAmount:
