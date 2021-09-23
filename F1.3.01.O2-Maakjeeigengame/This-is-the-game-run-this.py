@@ -20,11 +20,17 @@ if os.path.isfile("achievements.txt"):
 else:
     achievement = open("achievements.txt", "x")
 achievement.close()
+
 def save(irritation, textspeed, cringe):
     open('traumatix.txt', 'w').close()
     f = open("traumatix.txt", "a")
     f.write(str(cringe)+";"+str(irritation)+";"+str(textspeed))
     f.close()
+def dlc(irritation, textspeed, cringe):
+    time.sleep(2 / textspeed)
+    print("Hmm, seems like the roadblock there once was is gone")
+    time.sleep(4 / textspeed)
+
 def path1(irritation, textspeed, cringe):
     print("the sun is shining, the warmth feels great on ur skin")
     time.sleep(2 / textspeed)
@@ -88,8 +94,14 @@ def path1(irritation, textspeed, cringe):
         elif "left" in input1[0]:
             print("okay, lets take the turn left")
             time.sleep(3 / textspeed)
-            print("oh there is a roadblock here, lets go back")
-            time.sleep(3 / textspeed)
+            if os.path.isfile("DLC.activ"):
+                dlc(irritation, textspeed, cringe)
+                exxit = 1
+                if exxit == 1:
+                            break
+            else:
+                print("oh there is a roadblock here, lets go back")
+                time.sleep(3 / textspeed)
         elif "right" in input1[0]:
             print("okay, lets take the turn right")
             time.sleep(3 / textspeed)
