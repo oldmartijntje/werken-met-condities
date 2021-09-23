@@ -114,11 +114,22 @@ pizzaAmount = "startup"
 randomized = "no"
 keepRandomized = "no"
 import os
-print("(there is an achievement added to achievement.txt)")
-time.sleep(3)
-achievement=open("achievements.txt", "a+")
-achievement.write("\n |PIZZAAA| " +str(datetime.datetime.now()))
-achievement.close
+know = open("knowledge.txt", "r+")
+check = know.read().split(";")
+if check[23] != "True":
+    print("(there is an achievement added to achievement.txt)")
+    time.sleep(3)
+    print("(there is an achievement added to achievement.txt)")
+    time.sleep(3)
+    achievement=open("achievements.txt", "a+")
+    achievement.write("\n |PIZZAAA| " +str(datetime.datetime.now()))
+    achievement.close
+    know.truncate(0)
+    know.seek(0)
+    check[21]= True
+    for line in check:
+        know.write(str(line) + ";")
+    know.close()
 #dit is een loop die je blijft vragen of je meer wilt bestellen en of je de menu kaart wilt zien
 while loop == True:
     menukaart = input("do you want to look at the menu? >>>")

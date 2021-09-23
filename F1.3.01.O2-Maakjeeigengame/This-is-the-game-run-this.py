@@ -1118,79 +1118,95 @@ def reopen(irritation, textspeed, cringe):
                     exit()
                 else:
                     print("i canttttt readdd thaaaaaat inputt, 'open files' and 'kill him' shoulddd do the trickkkkk")
-
-
-
-try:
-    f =open("traumatix.txt", "r")
-    reading = f.read().split(';',4)
-    cringe = int(reading[0])
-    irritation = int(reading[1])
-    textspeed = float(reading[2])
-    played = True
-except:
-    cringe = 0
-    textspeed = 2
-    irritation = 0
-    sad = 0
-    loop = True
-    funnyanswer = 0
-    played = False
-f.close()
-if played == False:
-    while loop == True:
-        input1 = input("press Enter to start ").split('.',1)
-        if input1[0] == "speed":
-            textspeed = float(input1[1])
-            print(f"someGoodSpeedChangeFeedback {textspeed}")
-        elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer == 0:
-            print("haha i see, so you are the person you hope people reffer to as funny. but u know what? they don't")
-            time.sleep(2 / textspeed)
-            print("are you really trying to get me mad before the game even started? lol")
-            time.sleep(2 / textspeed)
-            funnyanswer +=1
-            irritation -= 1
-        elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer == 1:
-            print("no...")
-            time.sleep(1 / textspeed)
-            print("fine, i'll start it")
-            loop = False
-            time.sleep(2 / textspeed)
-        elif input1[0] != "":
-            print(f"i said, press enter to start, not 'press {input1[0]} to start'")
-            time.sleep(1 / textspeed)
-        else:
-            loop = False
-            time.sleep(1 / textspeed)
-    print("welcome " +getpass.getuser() + ". you just woke up, it's beautiful outside")
-    loop = True
-    while loop == True:
-        time.sleep(2 / textspeed)
-        print("what do you want to do?")
-        time.sleep(1 / textspeed)
-        print(">go outside< \n>stay inside<")
-        input1 = input(">>>").split('.',1)
-        if input1[0] == "speed":
-            textspeed = float(input1[1])
-            print(f"someGoodSpeedChangeFeedback {textspeed}")
-        elif input1[0] == "":
-            print("What about choosing")
-            time.sleep(1 / textspeed)
-        else:
-            if "outside" in input1[0] or input1[0] == "1":
-                print("yes!")
+playLoop = True
+while playLoop == True:
+    know = open("knowledge.txt", "r+")
+    check = know.read().split(";")
+    if check[23] == "True" and check[21] == "True" and check[16] == "True" and check[17] == "True" and check[18] == "True" and check[19] == "True":
+        print("you already have all the endgame achievement's, so we will skip the endgame for u")
+        cringe = 0
+        textspeed = 2
+        irritation = 0
+        sad = 0
+        loop = True
+        funnyanswer = 0
+        played = False
+    else:
+        try:
+            f =open("traumatix.txt", "r")
+            reading = f.read().split(';',4)
+            cringe = int(reading[0])
+            irritation = int(reading[1])
+            textspeed = float(reading[2])
+            played = True
+        except:
+            cringe = 0
+            textspeed = 2
+            irritation = 0
+            sad = 0
+            loop = True
+            funnyanswer = 0
+            played = False
+        f.close()
+    if played == False:
+        while loop == True:
+            input1 = input("press Enter to start ").split('.',1)
+            if input1[0] == "speed":
+                textspeed = float(input1[1])
+                print(f"someGoodSpeedChangeFeedback {textspeed}")
+            elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer == 0:
+                print("haha i see, so you are the person you hope people reffer to as funny. but u know what? they don't")
+                time.sleep(2 / textspeed)
+                print("are you really trying to get me mad before the game even started? lol")
+                time.sleep(2 / textspeed)
+                funnyanswer +=1
+                irritation -= 1
+            elif (input1[0] == "enter" or input1[0] == "Enter") and funnyanswer == 1:
+                print("no...")
+                time.sleep(1 / textspeed)
+                print("fine, i'll start it")
+                loop = False
+                time.sleep(2 / textspeed)
+            elif input1[0] != "":
+                print(f"i said, press enter to start, not 'press {input1[0]} to start'")
+                time.sleep(1 / textspeed)
+            else:
                 loop = False
                 time.sleep(1 / textspeed)
-                end, irritation, cringe = path1(irritation, textspeed, cringe)
-                if end == 1:
-                    path2(irritation, textspeed, cringe)
-            elif "inside" in input1[0] or input1[0] == "2":
-                loop = False
-                print("Why tho?")
-                irritation +=2
-                time.sleep(2 / textspeed)
-                path2(irritation, textspeed, cringe)
+        print("welcome " +getpass.getuser() + ". you just woke up, it's beautiful outside")
+        loop = True
+        while loop == True:
+            time.sleep(2 / textspeed)
+            print("what do you want to do?")
+            time.sleep(1 / textspeed)
+            print(">go outside< \n>stay inside<")
+            input1 = input(">>>").split('.',1)
+            if input1[0] == "speed":
+                textspeed = float(input1[1])
+                print(f"someGoodSpeedChangeFeedback {textspeed}")
+            elif input1[0] == "":
+                print("What about choosing")
+                time.sleep(1 / textspeed)
             else:
-                print("what about choosing one of the options")
-else:
-    reopen(irritation,textspeed,cringe)
+                if "outside" in input1[0] or input1[0] == "1":
+                    print("yes!")
+                    loop = False
+                    time.sleep(1 / textspeed)
+                    end, irritation, cringe = path1(irritation, textspeed, cringe)
+                    if end == 1:
+                        path2(irritation, textspeed, cringe)
+                elif "inside" in input1[0] or input1[0] == "2":
+                    loop = False
+                    print("Why tho?")
+                    irritation +=2
+                    time.sleep(2 / textspeed)
+                    path2(irritation, textspeed, cringe)
+                else:
+                    print("what about choosing one of the options")
+    else:
+        reopen(irritation,textspeed,cringe)
+    reopenQuestion = input("\ndo you want to play again? if you want to close, say quit or q")
+    if reopenQuestion == "q" or reopenQuestion == "quit":
+        playLoop =False
+    else:
+        playLoop = True
