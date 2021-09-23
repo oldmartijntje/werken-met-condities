@@ -3,7 +3,7 @@ import getpass
 import os
 import os.path
 import datetime
-
+exxit = 0
 if os.path.isfile("traumatix.txt"):
     f = open("traumatix.txt", "a")
 else:
@@ -151,10 +151,14 @@ def path1(irritation, textspeed, cringe):
                                 know.write(str(line) + ";")
                             know.close()
                         save(irritation,textspeed,cringe)
-                        exit()
+                        exxit = 1
+                        if exxit == 1:
+                            break
                     elif "yes" in input1[0]:
                         print("okay, then choose again")
                         loop1 = False
+                if exxit == 1:
+                    break
             elif irritation >= 18:
                 print("why do humans never make things easy")
                 irritation += 10
@@ -198,7 +202,9 @@ def path1(irritation, textspeed, cringe):
                         know.write(str(line) + ";")
                     know.close()
                 save(irritation,textspeed,cringe)
-                exit()
+                exxit = 1
+                if exxit == 1:
+                            break
             else:
                 print("you are starting to annoy me")
         elif "dance" in input1[0]:
@@ -231,6 +237,8 @@ def path1(irritation, textspeed, cringe):
         else:
             print("i didn't get that, please be clearer, keywords like 'left' and 'right' and 'forward' will work")
             time.sleep(5 / textspeed)
+    if exxit == 1:
+        return
     time.sleep(5 / textspeed)
     print("after you turned right you see an old man")
     time.sleep(3 / textspeed)
@@ -273,7 +281,9 @@ def path1(irritation, textspeed, cringe):
                     know.write(str(line) + ";")
                 know.close()
             save(irritation,textspeed,cringe)
-            exit()
+            exxit = 1
+            if exxit == 1:
+                            break
         elif "drive" in input1[0] or "gas" in input1[0]:
             print("you try to drive away but the man starts to shoot at you")
             time.sleep(5 / textspeed)
@@ -297,7 +307,9 @@ def path1(irritation, textspeed, cringe):
                     know.write(str(line) + ";")
                 know.close()
             save(irritation,textspeed,cringe)
-            exit()
+            exxit = 1
+            if exxit == 1:
+                            break
         elif "dance" in input1[0]:
             print("U decided to do a fortnite dance for some reason")
             time.sleep(2 / textspeed)
@@ -328,6 +340,8 @@ def path1(irritation, textspeed, cringe):
         else:
             print("i didn't get that, please be clearer, keywords like 'leave' and 'stay' and 'dance' will work")
             time.sleep(5 / textspeed)
+    if exxit == 1:
+                            return
     print("you are alone on the streets.")
     time.sleep(3 / textspeed)
     
@@ -401,7 +415,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         elif "steal" in input1[0] or "rob" in input1[0]:
                             print("you grab onto her handbag")
                             time.sleep(3 / textspeed)
@@ -436,8 +452,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
-                        
+                            exxit = 1
+                            if exxit == 1:
+                                break
                             
                         elif "dance" in input1[0]:
                             print("U decided to do a fortnite dance for some reason")
@@ -460,7 +477,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         elif "dab" in input1[0] and cringe <= 2:
                             print("u decided to dab, i should get this feature removed")
                             cringe += 1
@@ -481,7 +500,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         elif "dab" in input1[0] and cringe == 3:
                             print("u decided to dab, i am going to remove this feature")
                             cringe += 1
@@ -502,7 +523,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         elif "dab" in input1[0] and cringe == 4:
                             print("u decided to dab, haha it's deleted now")
                             cringe += 3
@@ -523,7 +546,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         elif "dab" in input1[0] and cringe == 5:
                             print("u decided to dab, dangit, now it should be deleted")
                             cringe += 3
@@ -544,7 +569,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         elif "die" in input1[0]:
                             print("as you wish")
                             time.sleep(2 / textspeed)
@@ -564,7 +591,9 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         elif "yeet" in input1[0]:
                             print("she yeeted you instead")
                             time.sleep(2 / textspeed)
@@ -584,10 +613,14 @@ def path1(irritation, textspeed, cringe):
                                     know.write(str(line) + ";")
                                 know.close()
                             save(irritation,textspeed,cringe)
-                            exit()
+                            exxit = 1
+                            if exxit == 1:
+                                break
                         else:
                             print("i didn't get that, please be clearer, keywords like 'talk' and 'dab' and 'steal' will work")
                             time.sleep(5 / textspeed)
+                    if exxit == 1:
+                            break
                 elif "no" in input1[0] or "don't" in input1[0]:
                     print("you try to walk away")
                     time.sleep(4 / textspeed)
@@ -609,7 +642,9 @@ def path1(irritation, textspeed, cringe):
                             know.write(str(line) + ";")
                         know.close()
                     save(irritation,textspeed,cringe)
-                    exit()
+                    exxit = 1
+                    if exxit == 1:
+                            break
                 elif "dance" in input1[0]:
                     print("U decided to do a fortnite dance for some reason")
                     time.sleep(2 / textspeed)
@@ -640,6 +675,8 @@ def path1(irritation, textspeed, cringe):
                 else:
                     print("i didn't get that, please be clearer, keywords like 'don't' and 'interact' and 'die' will work")
                     time.sleep(5 / textspeed)
+            if exxit == 1:
+                            break
         else:
             print("that's not a valid answer, what about a command like 'yes' or 'yeet' or 'no,' that should work")
 def path2(irritation, textspeed, cringe):
@@ -856,7 +893,7 @@ def path2(irritation, textspeed, cringe):
             know.write(str(line) + ";")
         know.close()
     save(irritation,textspeed,cringe)
-    exit()
+    exxit = 1
 def reopen(irritation, textspeed, cringe):
     funnyanswer = 0
     loop = True
@@ -915,7 +952,7 @@ def reopen(irritation, textspeed, cringe):
             for line in check:
                 know.write(str(line) + ";")
             know.close()
-        exit()
+        exxit = 1
     elif irritation >= 100:
         print("you thought you could reset didn't you?")
         time.sleep(6 / textspeed)
@@ -942,6 +979,7 @@ def reopen(irritation, textspeed, cringe):
         print("ah no, i am stuckuckuckuckuckuck-")
         time.sleep(4 / textspeed)
         print("arererere uu doingngngngngngng thiiiiiiiiiiiisssss?")
+        print("what do you do?")
         loop = True
         while loop == True:
             
@@ -978,7 +1016,7 @@ def reopen(irritation, textspeed, cringe):
                         os.remove("traumatix.txt")
                     except:
                         print("failed to remove save")
-                    exit()
+                    exxit = 1
                 elif "files" in input1[0]:
                     loop = False
                     try:
@@ -1023,6 +1061,7 @@ def reopen(irritation, textspeed, cringe):
         print("ah no, i am stuckuckuckuckuckuck-")
         time.sleep(4 / textspeed)
         print("arererere uu doingngngngngngng thiiiiiiiiiiiisssss?")
+        print("what do you do?")
         loop = True
         while loop == True:
             
@@ -1064,7 +1103,7 @@ def reopen(irritation, textspeed, cringe):
                         os.remove("traumatix.txt")
                     except:
                         print("failed to remove save")
-                    exit()
+                    exxit = 1
                 elif "files" in input1[0]:
                     loop = False
                     try:
@@ -1115,7 +1154,7 @@ def reopen(irritation, textspeed, cringe):
                     time.sleep(5 / textspeed)
                     print("anyways, bye")
                     time.sleep(3 / textspeed)
-                    exit()
+                    exxit = 1
                 else:
                     print("i canttttt readdd thaaaaaat inputt, 'open files' and 'kill him' shoulddd do the trickkkkk")
 playLoop = True
@@ -1192,9 +1231,12 @@ while playLoop == True:
                     print("yes!")
                     loop = False
                     time.sleep(1 / textspeed)
-                    end, irritation, cringe = path1(irritation, textspeed, cringe)
-                    if end == 1:
-                        path2(irritation, textspeed, cringe)
+                    try:
+                        end, irritation, cringe = path1(irritation, textspeed, cringe)
+                        if end == 1:
+                            path2(irritation, textspeed, cringe)
+                    except:
+                        e = 0
                 elif "inside" in input1[0] or input1[0] == "2":
                     loop = False
                     print("Why tho?")
@@ -1205,8 +1247,13 @@ while playLoop == True:
                     print("what about choosing one of the options")
     else:
         reopen(irritation,textspeed,cringe)
-    reopenQuestion = input("\ndo you want to play again? if you want to close, say quit or q")
-    if reopenQuestion == "q" or reopenQuestion == "quit":
-        playLoop =False
-    else:
-        playLoop = True
+    while True:
+        reopenQuestion = input("\ndo you want to play again? Y/N").lower
+        if reopenQuestion == "y":
+            playLoop = True
+        elif reopenQuestion == "n":
+            playLoop =False
+    
+        
+    
+        
