@@ -136,9 +136,10 @@ def path1(irritation, textspeed, cringe):
             print("okay, lets take the turn right")
             time.sleep(3 / textspeed)
             loop = False
+            exxit = 0
         elif "forward" in input1[0] or "straight" in input1[0]:
             print("okay, you are starting to annoy me")
-            time.sleep(4 / textspeed)
+            time.sleep(2 / textspeed)
             irritation += 10
             if irritation == 9:
                 print("the thing is, i know you are trying to be funny, but i don't like that.")
