@@ -449,7 +449,11 @@ while loop == True:
                     know.write(str(line) + ";")
                 know.close()
             print("congrats, this was the true ending! but if u reopen it there might be new things to do")
-            input("input to close >>>")
+            try:
+                os.remove("pizcalc1.txt")
+                os.remove("pizcalc2.txt")
+            except:
+                e = 8
             
             
         else:

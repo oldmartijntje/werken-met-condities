@@ -8,7 +8,8 @@ script = "the game launcher.py"
 current = "qwfj6qfnadlfa3242flakn62laga"
 recover = list()
 exxit = 0
-achievements = 24
+percentage = 0
+achievements = 28
 today = date.today()
 def crashReport(recover,error,script):
     if os.path.isfile("crashLog.txt"):
@@ -66,7 +67,7 @@ def path1(irritation, textspeed, cringe):
     time.sleep(2 / textspeed)
     loop = True
     while loop == True:
-        print("u see your car, it's your favorite car. what do you want to do?")
+        print("\nu see your car, it's your favorite car. what do you want to do?")
         input1 = input(">>>").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
@@ -78,6 +79,79 @@ def path1(irritation, textspeed, cringe):
             time.sleep(2 / textspeed)
             print("u did it just to annoy me didn't u?")
             return 1, irritation, cringe
+        elif "shit" in input1[0]:
+            if "car" in input1[0]:
+                if "on" in input1[0]:
+                    print("Why would you shit on the car")
+                    time.sleep(2 / textspeed)
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[24] != "True":
+                        print("(there is an achievement added to achievement.txt)")
+                        time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |The forbidden chocolates| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[24]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                elif "in" in input1[0]:
+                    print("Why would you shit in the car")
+                    time.sleep(2 / textspeed)
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[25] != "True":
+                        print("(there is an achievement added to achievement.txt)")
+                        time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |sweet and salty| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[25]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                else:
+                    print("i didn't get that, things like 'shit on the car, shit in the car, or shit' will work")
+                    time.sleep(3 / textspeed)
+
+            else:
+                print("you shit your pants")
+                know = open("knowledge.txt", "r+")
+                check = know.read().split(";")
+                if check[26] != "True":
+                    print("(there is an achievement added to achievement.txt)")
+                    time.sleep(4)
+                    achievement=open("achievements.txt", "a+")
+                    achievement.write("\n |a little special something| " +str(datetime.datetime.now()))
+                    achievement.close()
+                    know.truncate(0)
+                    know.seek(0)
+                    check[26]= True
+                    for line in check:
+                        know.write(str(line) + ";")
+                    know.close()
+        elif "give" in input1[0] and "gas" in input1[0]:
+            print("you gave the car gas, why would you hand a car gas")
+            time.sleep(3 / textspeed)
+            know = open("knowledge.txt", "r+")
+            check = know.read().split(";")
+            if check[27] != "True":
+                print("(there is an achievement added to achievement.txt)")
+                time.sleep(4)
+                achievement=open("achievements.txt", "a+")
+                achievement.write("\n |Let's hand people gas!| " +str(datetime.datetime.now()))
+                achievement.close()
+                know.truncate(0)
+                know.seek(0)
+                check[27]= True
+                for line in check:
+                    know.write(str(line) + ";")
+                know.close()
         elif "car" in input1[0]:
             print("i knew you would want to go inside that car")
             time.sleep(2 / textspeed)
@@ -110,13 +184,13 @@ def path1(irritation, textspeed, cringe):
             print("no, there is nothing to yeet")
             time.sleep(2 / textspeed)
         else:
-            print("i didn't get that, please be clearer, keywords like 'car' and 'back inside' will work")
+            print("i didn't get that, please be clearer, keywords like 'car' and 'back inside' and 'shit car' will work")
             time.sleep(5 / textspeed)
-    print("you start up the car, the engine starts and you give gas.")
+    print("you start up the car, the engine starts and you start to accelerate.")
     time.sleep(5 / textspeed)
     loop = True
     while loop == True:
-        print("you end up at an intersection, you can go left or right. which one do you choose?")
+        print("\nyou end up at an intersection, you can go left or right. which one do you choose?")
         input1 = input(">>>").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
@@ -134,7 +208,7 @@ def path1(irritation, textspeed, cringe):
                 time.sleep(3 / textspeed)
         elif "right" in input1[0]:
             print("okay, lets take the turn right")
-            time.sleep(3 / textspeed)
+            time.sleep(1 / textspeed)
             loop = False
             exxit = 0
         elif "forward" in input1[0] or "straight" in input1[0]:
@@ -146,7 +220,7 @@ def path1(irritation, textspeed, cringe):
                 time.sleep(4 / textspeed)
                 loop1 = True
                 while loop1 == True:
-                    print("are you going to behave?")
+                    print("\nare you going to behave?")
                     input1 = input(">>>").split('.',1)
                     if input1[0] == "speed":
                         textspeed = float(input1[1])
@@ -282,7 +356,7 @@ def path1(irritation, textspeed, cringe):
             time.sleep(5 / textspeed)
     if exxit == 1:
         return
-    time.sleep(5 / textspeed)
+    time.sleep(2 / textspeed)
     print("after you turned right you see an old man")
     time.sleep(3 / textspeed)
     print("you stop the car")
@@ -291,7 +365,7 @@ def path1(irritation, textspeed, cringe):
     time.sleep(5 / textspeed)
     loop = True
     while loop == True:
-        print("what do you do?")
+        print("\nwhat do you do?")
         input1 = input(">>>").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
@@ -327,7 +401,7 @@ def path1(irritation, textspeed, cringe):
             exxit = 1
             if exxit == 1:
                             break
-        elif "drive" in input1[0] or "gas" in input1[0]:
+        elif "drive" in input1[0] or "accelerate" in input1[0] or "gas" in input1[0]:
             print("you try to drive away but the man starts to shoot at you")
             time.sleep(5 / textspeed)
             print("you forget to pay attention to the road and you hit an oil truck")
@@ -398,7 +472,7 @@ def path1(irritation, textspeed, cringe):
     time.sleep(5 / textspeed)
     loop = True
     while loop == True:
-        print("what do you do?")
+        print("\nwhat do you do?")
         input1 = input(">>>").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
@@ -419,7 +493,7 @@ def path1(irritation, textspeed, cringe):
             time.sleep(5 / textspeed)
             loop2 = True
             while loop2 == True:
-                print("do you want to interact with her?")
+                print("\ndo you want to interact with her?")
                 input1 = input(">>>").split('.',1)
                 if input1[0] == "speed":
                     textspeed = float(input1[1])
@@ -431,7 +505,7 @@ def path1(irritation, textspeed, cringe):
                     time.sleep(3 / textspeed)
                     loop1 = True
                     while loop1 == True:
-                        print("what do you want to do?")
+                        print("\nwhat do you want to do?")
                         input1 = input(">>>").split('.',1)
                         if input1[0] == "speed":
                             textspeed = float(input1[1])
@@ -728,7 +802,7 @@ def path1(irritation, textspeed, cringe):
 def path2(irritation, textspeed, cringe):
     loop = True
     while loop == True:
-        print("you stay inside, so what are you gonna do inside?")
+        print("\nyou stay inside, so what are you gonna do inside?")
         input1 = input(">>>").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
@@ -780,7 +854,7 @@ def path2(irritation, textspeed, cringe):
     loop = True
     beingNice = 0
     while loop == True:
-        print("do you want to go inside or outside?")
+        print("\ndo you want to go inside or outside?")
         input1 = input(">>>").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
@@ -861,7 +935,7 @@ def path2(irritation, textspeed, cringe):
     time.sleep(3 / textspeed)
     loop = True
     while loop == True:
-        print("do you want to go inside or outside?")
+        print("\ndo you want to go inside or outside?")
         input1 = input(">>>").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
@@ -945,7 +1019,7 @@ def reopen(irritation, textspeed, cringe):
     funnyanswer2 = 0
     loop = True
     while loop == True:
-        input1 = input("press Enter to start ").split('.',1)
+        input1 = input("\npress Enter to start ").split('.',1)
         if input1[0] == "speed":
             textspeed = float(input1[1])
             print(f"someGoodSpeedChangeFeedback {textspeed}")
@@ -1051,7 +1125,7 @@ def reopen(irritation, textspeed, cringe):
         loop = True
         while loop == True:
             
-            input1 = input(">>>").split('.',1)
+            input1 = input("\n>>>").split('.',1)
             if input1[0] == "speed":
                 textspeed = float(input1[1])
                 print(f"someGoodSpeedChangeFeedback {textspeed}")
@@ -1136,7 +1210,7 @@ def reopen(irritation, textspeed, cringe):
         loop = True
         while loop == True:
             
-            input1 = input(">>>").split('.',1)
+            input1 = input("\n>>>").split('.',1)
             if input1[0] == "speed":
                 textspeed = float(input1[1])
                 print(f"someGoodSpeedChangeFeedback {textspeed}")
@@ -1262,7 +1336,14 @@ while playLoop == True:
         print("")
     #create the achievements stored save file memory file if it doesn't exist
     if os.path.isfile("knowledge.txt"):
-        know = open("knowledge.txt", "a")
+        know = open("knowledge.txt", "a+")
+        knowing = know.read().split(";")
+        if len(knowing) != achievements:
+            for x in range(0, achievements - len(knowing)):
+                know.write("False;") 
+            for x in range(0,len(knowing)):
+                if knowing[x] == "True":
+                    percentage += 1
     else:
         know = open("knowledge.txt", "x")
         for x in range(0,achievements):
@@ -1312,12 +1393,12 @@ while playLoop == True:
             played = False
         f.close()
     #if there is no save file, this starts
-    
+    print("you have "+str(percentage)+" out of the " +str(achievements) +" achievements collected")
     if played == False:
         funnyanswer = 0
         funnyanswer2 = 0
         while loop == True:
-            input1 = input("press Enter to start ").split('.',1)
+            input1 = input("\npress Enter to start ").split('.',1)
             if input1[0] == "speed":
                 textspeed = float(input1[1])
                 print(f"someGoodSpeedChangeFeedback {textspeed}")
@@ -1368,7 +1449,7 @@ while playLoop == True:
             time.sleep(2 / textspeed)
             print("what do you want to do?")
             time.sleep(1 / textspeed)
-            print(">go outside< \n>stay inside<")
+            print(">\ngo outside< \n>stay inside<")
             input1 = input(">>>").split('.',1)
             if input1[0] == "speed":
                 textspeed = float(input1[1])
