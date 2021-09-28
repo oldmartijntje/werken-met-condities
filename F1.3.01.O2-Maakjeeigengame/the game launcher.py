@@ -8,7 +8,7 @@ script = "the game launcher.py"
 current = "qwfj6qfnadlfa3242flakn62laga"
 recover = list()
 exxit = 0
-percentage = 0
+
 achievements = 28
 today = date.today()
 def crashReport(recover,error,script):
@@ -1339,6 +1339,7 @@ while playLoop == True:
     except:
         print("")
     #create the achievements stored save file memory file if it doesn't exist
+    percentage = 0
     if os.path.isfile("knowledge.txt"):
         know = open("knowledge.txt", "r+")
         knowing = know.read().split(";")
