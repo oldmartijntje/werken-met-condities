@@ -798,7 +798,7 @@ def path1(irritation, textspeed, cringe):
             if exxit == 1:
                             break
         else:
-            print("that's not a valid answer, what about a command like 'yes' or 'yeet' or 'no,' that should work")
+            print("that's not a valid answer, what about a command like 'yes' or 'no,' that should work")
 def path2(irritation, textspeed, cringe):
     loop = True
     while loop == True:
@@ -1302,7 +1302,11 @@ def reopen(irritation, textspeed, cringe):
                     exxit = 1
                 else:
                     print("i canttttt readdd thaaaaaat inputt, 'open files' and 'kill him' shoulddd do the trickkkkk")
-
+def get_number_of_elements(list):
+    count = 0
+    for element in list:
+        count += 1
+    return count
 
 #make a file with this version stored
 playLoop = True
@@ -1336,14 +1340,15 @@ while playLoop == True:
         print("")
     #create the achievements stored save file memory file if it doesn't exist
     if os.path.isfile("knowledge.txt"):
-        know = open("knowledge.txt", "a+")
+        know = open("knowledge.txt", "r+")
         knowing = know.read().split(";")
-        if len(knowing) != achievements:
-            for x in range(0, achievements - len(knowing)):
+        knowingLength = get_number_of_elements(knowing)
+        if knowingLength < achievements:
+            for x in range(0, achievements - knowingLength):
                 know.write("False;") 
-            for x in range(0,len(knowing)):
-                if knowing[x] == "True":
-                    percentage += 1
+        for x in range(0,knowingLength):
+            if knowing[x] == "True":
+                percentage += 1
     else:
         know = open("knowledge.txt", "x")
         for x in range(0,achievements):
