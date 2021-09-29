@@ -216,8 +216,6 @@ check = know.read().split(";")
 if check[23] != "True":
     print("(there is an achievement added to achievement.txt)")
     time.sleep(3)
-    print("(there is an achievement added to achievement.txt)")
-    time.sleep(3)
     achievement=open("achievements.txt", "a+")
     achievement.write("\n |PIZZAAA| " +str(datetime.datetime.now()))
     achievement.close
