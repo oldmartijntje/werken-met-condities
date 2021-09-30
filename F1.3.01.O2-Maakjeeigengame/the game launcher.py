@@ -4,12 +4,16 @@ import os
 import os.path
 import datetime
 from datetime import date
+import webbrowser
+
+if os.path.isfile("DLC.activ"):
+    achievements = 30
+else:
+    achievements = 28
 script = "the game launcher.py"
 current = "qwfj6qfnadlfa3242flakn62laga"
 recover = list()
 exxit = 0
-
-achievements = 28
 today = date.today()
 def crashReport(recover,error,script):
     if os.path.isfile("crashLog.txt"):
@@ -62,6 +66,127 @@ def dlc(irritation, textspeed, cringe):
     time.sleep(2 / textspeed)
     print("Hmm, seems like the roadblock there once was is gone")
     time.sleep(4 / textspeed)
+def dlc2(irritation, textspeed, cringe):
+    time.sleep(2 / textspeed)
+    print("you open your computer")
+    time.sleep(3 / textspeed)
+    print("there are some things still opened")
+    time.sleep(4 / textspeed)
+    print("let's check it out shall we")
+    time.sleep(2 / textspeed)
+    loop = True
+    while loop == True:
+        print("\nthere are some websites open, do we want to open a website, or something else?")
+        input1 = input(">>>").split('.',1)
+        if input1[0] == "speed":
+            textspeed = float(input1[1])
+            print(f"someGoodSpeedChangeFeedback {textspeed}")
+        elif "else" in input1[0]:
+            print("okay, what do you want to open?")
+            time.sleep(3 / textspeed)
+        elif "web" in input1[0] or "browser" in input1[0] or "site" in input1[0]:
+            print("there are 5 websites")
+            time.sleep(3 / textspeed)
+            print("1 is www.numbers.com, 2 is https://dotw.org, 3 is http://thousand.nl, and 4 is http://fibonacci.net")
+            time.sleep(3 / textspeed)
+            loop1 = True
+            while loop1 == True:
+                print("\nwhich one do you want to open?")
+                input1 = input(">>>").split('.',1)
+                if input1[0] == "speed":
+                    textspeed = float(input1[1])
+                    print(f"someGoodSpeedChangeFeedback {textspeed}")
+                elif "numbers" in input1[0] or input1[0]== "1":
+                    print("okay, you decide to open www.numbers.com")
+                    time.sleep(4 / textspeed)
+                    timee = 0
+                    while True:
+                        if timee >20 and timee<50:
+                            if timee % 2 == 0:
+                                print(timee)
+                        timee+=1
+                        if timee == 51:
+                            break
+                    time.sleep(2 / textspeed)
+                    print("okay, www.numbers.com is weird")
+                    time.sleep(2 / textspeed)
+                    print("right as you want to close the www.numbers.com website, you feel something held against the back of your head")
+                    time.sleep(4 / textspeed)
+                    print("'move, and you will die' a fermilliar voice says")
+                    time.sleep(2 / textspeed)
+                    print("you try to turn around")
+                    time.sleep(1 / textspeed)
+                    print("you hear the trigger click")
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[28] != "True":
+                        print("(there is an achievement added to achievement.txt)")
+                        time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |Random numbers?| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[28]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                        exxit = 1
+                        if exxit == 1:
+                            break
+                elif "dotw" in input1[0] or input1[0]== "2":
+                    print("okay, you decide to open https://dotw.org")
+                    time.sleep(4 / textspeed)
+                    timeee = 0
+                    weekNamen = ["mo","tu","we","th","fr","sa","su"]
+                    while True:
+                        dag =input("say a name of a day of the week (mo =  monday, th = thursday")
+                        if dag in weekNamen:
+                            break
+                        else:
+                            print("that's not a day of the week")   
+                    while True:
+                        if dag != weekNamen[time]:
+                            print(weekNamen[time])
+                        else:
+                            print(weekNamen[time])
+                            break  
+                        timeee+=1
+                    time.sleep(2 / textspeed)
+                    print("okay, https://dotw.org is weird")
+                    time.sleep(3 / textspeed)
+                    print("hmm, so what else is there?")
+                    time.sleep(2/textspeed)
+                    print("hey, let's try this website...")
+                    time.sleep(4/textspeed)
+                    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                    time.sleep(1)
+                    input("\npress enter to continue\n")
+                    print("ah damn, it's a rickroll")
+                    time.sleep(4/textspeed)
+                    print("you pickup the gun next to you and shoot yourself")
+                    time.sleep(4/textspeed)
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[29] != "True":
+                        print("(there is an achievement added to achievement.txt)")
+                        time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |Never gonna give you up!| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[29]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                        exxit = 1
+                        if exxit == 1:
+                            break
+            if exxit == 1:
+                break
+    if exxit == 1:
+        return
 def path1(irritation, textspeed, cringe):
     print("the sun is shining, the warmth feels great on ur skin")
     time.sleep(2 / textspeed)
@@ -812,6 +937,18 @@ def path2(irritation, textspeed, cringe):
             loop = False
             irritation += 10
             time.sleep(2 / textspeed)
+        elif "computer" in input1[0]:
+            print("is there a computer here")
+            time.sleep(3 / textspeed)
+            if os.path.isfile("DLC.activ"):
+                print("hmm, yes there is a computer")
+                dlc2(irritation, textspeed, cringe)
+                exxit = 1
+                if exxit == 1:
+                            break
+            else:
+                print("oh nope, there is no computer here, maybe later in some DLC")
+                time.sleep(3 / textspeed)
         elif "nothing" in input1[0] and irritation < 20:
             print("....")
             time.sleep(2 / textspeed)
@@ -844,7 +981,7 @@ def path2(irritation, textspeed, cringe):
             print("no, there is nothing to yeet")
             time.sleep(2 / textspeed)
         else:
-            print("i didn't get that, please be clearer, keywords like 'annoy you' and 'nothing' will work")
+            print("i didn't get that, please be clearer, keywords like 'annoy you' and 'nothing' and 'computer' will work")
             time.sleep(5 / textspeed)
     print("so what is your plan? not making me happy?")
     time.sleep(5 / textspeed)
@@ -1347,7 +1484,7 @@ while playLoop == True:
         if knowingLength < achievements:
             for x in range(0, achievements - knowingLength):
                 know.write("False;") 
-        for x in range(0,knowingLength):
+        for x in range(0,achievements):
             if knowing[x] == "True":
                 percentage += 1
     else:
@@ -1455,7 +1592,7 @@ while playLoop == True:
             time.sleep(2 / textspeed)
             print("what do you want to do?")
             time.sleep(1 / textspeed)
-            print(">\ngo outside< \n>stay inside<")
+            print("\n>go outside< \n>stay inside<")
             input1 = input(">>>").split('.',1)
             if input1[0] == "speed":
                 textspeed = float(input1[1])
@@ -1474,7 +1611,7 @@ while playLoop == True:
                             path2(irritation, textspeed, cringe)
                     except:
                         e = 0
-                elif "inside" in input1[0] or input1[0] == "2":
+                elif "inside" in input1[0] or "stay" in input1[0] or input1[0] == "2":
                     loop = False
                     print("Why tho?")
                     irritation +=2
