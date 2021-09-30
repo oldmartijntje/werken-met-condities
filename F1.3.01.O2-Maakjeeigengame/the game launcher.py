@@ -7,7 +7,7 @@ from datetime import date
 import webbrowser
 
 if os.path.isfile("DLC.activ"):
-    achievements = 31
+    achievements = 32
 else:
     achievements = 28
 script = "the game launcher.py"
@@ -15,6 +15,7 @@ current = "qwfj6qfnadlfa3242flakn62laga"
 recover = list()
 exxit = 0
 today = date.today()
+
 def crashReport(recover,error,script):
     if os.path.isfile("crashLog.txt"):
         crash = open("crashLog.txt", "a")
@@ -67,8 +68,15 @@ def dlc(irritation, textspeed, cringe):
     print("Hmm, seems like the roadblock there once was is gone")
     time.sleep(4 / textspeed)
 def dlc2(irritation, textspeed, cringe):
+    def fibonacci(fullNumber,loopNumber):
+        midNumber = 0
+        midNumber = fullNumber + loopNumber
+        loopNumber = fullNumber
+        fullNumber = midNumber
+        print(fullNumber)
+        return fullNumber,loopNumber
     time.sleep(2 / textspeed)
-    print("you open your computer")
+    print("you open the computer")
     time.sleep(3 / textspeed)
     print("there are some things still opened")
     time.sleep(4 / textspeed)
@@ -85,9 +93,9 @@ def dlc2(irritation, textspeed, cringe):
             print("okay, what do you want to open?")
             time.sleep(3 / textspeed)
         elif "web" in input1[0] or "browser" in input1[0] or "site" in input1[0]:
-            print("there are 5 websites")
+            print("there are 4 websites opened")
             time.sleep(3 / textspeed)
-            print("1 is www.numbers.com, 2 is https://dotw.org, 3 is http://thousand.nl, and 4 is http://fibonacci.net")
+            print("1 is www.numbers.com, 2 is https://dotw.org, 3 is http://thousand.nl, and 4 is http://fibonacci.net, or you can open a new one")
             time.sleep(3 / textspeed)
             loop1 = True
             while loop1 == True:
@@ -188,7 +196,6 @@ def dlc2(irritation, textspeed, cringe):
                     time.sleep(4 / textspeed)
                     amount = 0
                     round = 50
-                    cheese = True
                     while True:
                         print(str(amount) +" + "+str(round)+" = "+str(amount+round))
                         amount +=round
@@ -212,7 +219,7 @@ def dlc2(irritation, textspeed, cringe):
                         print("(there is an achievement added to achievement.txt)")
                         time.sleep(4)
                         achievement=open("achievements.txt", "a+")
-                        achievement.write("\n |Never gonna give you up!| " +str(datetime.datetime.now()))
+                        achievement.write("\n |Secret Code?| " +str(datetime.datetime.now()))
                         achievement.close()
                         know.truncate(0)
                         know.seek(0)
@@ -223,6 +230,136 @@ def dlc2(irritation, textspeed, cringe):
                         exxit = 1
                         if exxit == 1:
                             break
+                elif "fibonacci" in input1[0] or input1[0]== "4":
+                    print("okay, you decide to open http://fibonacci.net")
+                    time.sleep(4 / textspeed)
+                    print("there is a lot of text here, let's just skip over that")
+                    time.sleep(2 / textspeed)
+                    print("hey what is this? u click on a button labelled 'start'")
+                    time.sleep(4 / textspeed)
+                    lastNumber = 0
+                    thisNumber = 1
+                    while True:
+                        try:
+                            loopTime = int(input("it asks you 'how many times?'\n"))
+                            break
+                        except:
+                            print("maybe try putting in a number")
+                    print("\n0\n1")
+                    for x in range(0,loopTime):
+                        thisNumber,lastNumber = fibonacci(thisNumber,lastNumber)
+                    print("\nokay that is defenitely interesting")
+                    time.sleep(3 / textspeed)
+                    print("there seems to be some sort of logic involved")
+                    time.sleep(3 / textspeed)
+                    print("hmm maybe we could look up something that explains this")
+                    time.sleep(3 / textspeed)
+                    print("maybe i can get the wikipedia link adress and open it in this pc's browser")
+                    time.sleep(3 / textspeed)
+                    print("\nhmm what is that sound? you open the windows to see where it comes from")
+                    time.sleep(4 / textspeed)
+                    print("you see a plane flying in the direction of the house you are in")
+                    time.sleep(3 / textspeed)
+                    print("you run to the pc, turn it of and run outside")
+                    time.sleep(3 / textspeed)
+                    print("whilst you run through the garden you look behind you too see how long you have to escape")
+                    time.sleep(4 / textspeed)
+                    print("whilst looking at the airplane you trip over some cobblestones")
+                    time.sleep(3 / textspeed)
+                    print("you faceplant onto the cobblestones")
+                    time.sleep(3 / textspeed)
+                    print("everything goes black, and you wait for the crash")
+                    time.sleep(3 / textspeed)
+                    print("the plane crashes, it's a huge explosion")
+                    time.sleep(3 / textspeed)
+                    print("u lose consciousness")
+                    time.sleep(3 / textspeed)
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[31] != "True":
+                        print("(there is an achievement added to achievement.txt)")
+                        time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |The worst way to go| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[31]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                        exxit = 1
+                        if exxit == 1:
+                            break
+                elif "new" in input1[0] or "else" in input1[0]:
+                    print("okay, you decide to open something else instead")
+                    time.sleep(3/textspeed)
+                    loop2 = True
+                    while loop2 == True:
+                        print("\nwhich one do you want to open?")
+                        input1 = input(">>>").split('.',1)
+                        if input1[0] == "speed":
+                            textspeed = float(input1[1])
+                            print(f"someGoodSpeedChangeFeedback {textspeed}")
+                        elif "google" in input1[0] or "yahoo" in input1[0]:
+                            print("okay, you decide to open a search engine")
+                            time.sleep(3/textspeed)
+                            print("enter a URL")
+                            url = input()
+                            if "https://nl.wikipedia.org/wiki/Rij_van_Fibonacci" in url or ("wikipedia" in url and "fibonacci" in url):
+                                print("you decide to open the wikipedia page of Fibonacci")
+                                time.sleep(3 / textspeed)
+                                print("sadly, it doesn't tell u anything about fibonacci")
+                                time.sleep(3 / textspeed)
+                                print("insted, it shows u a textbox, and a airplane flight visualisation")
+                                time.sleep(4 / textspeed)
+                                print("it shows all the current flights near your location")
+                                time.sleep(3 / textspeed)
+                                print("you can see someone enter a location in the textbox")
+                                time.sleep(3 / textspeed)
+                                print("you try to check where the person is entering the location from")
+                                time.sleep(4 / textspeed)
+                                print("you can't find anything, but before it is too late, u decide to leave the house")
+                                time.sleep(4 / textspeed)
+                                print("you walk through the garden and notice a plane coming your direction")
+                                time.sleep(4 / textspeed)
+                                print("you see someone inthe house you just left")
+                                time.sleep(3 / textspeed)
+                                print("you decide to run away")
+                                time.sleep(3 / textspeed)
+                                print("you hide behind a wall")
+                                time.sleep(2 / textspeed)
+                                print("you loo through a hole in the wall and see someone running and trampling over some loose cobblestone")
+                                time.sleep(5 / textspeed)
+                                print("near seconds away from the plane crashing into the person, u decide to look away")
+                                time.sleep(4 / textspeed)
+                                print("you close your eyes, waiting for it")
+                                time.sleep(3 / textspeed)
+                                print("a loud explosion deafens you")
+                                time.sleep(3 / textspeed)
+                                print("you lose consciousnes")
+                                time.sleep(5 / textspeed)
+                                input("\npress Enter to continue\n")
+                                print("\nyou wake up")
+                                time.sleep(2 / textspeed)
+                                print("you see everything in ruins")
+                                time.sleep(3 / textspeed)
+                                print("you decide to see if the person is still alive")
+                                time.sleep(3 / textspeed)
+                                print("you walk towards the person lying between the rubble")
+                                time.sleep(3 / textspeed)
+                                print("you check their pulse to see if the person is still alive")
+                                time.sleep(4 / textspeed)
+                                print("the person is defenitely dead")
+                                time.sleep(3 / textspeed)
+                            elif "http" in url:
+                                webbrowser.open(url)
+                            else:
+                                webbrowser.open("https://"+url)
+                    
+                    
+
+                        
             if exxit == 1:
                 break
     if exxit == 1:
