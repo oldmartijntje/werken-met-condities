@@ -7,7 +7,7 @@ from datetime import date
 import webbrowser
 
 if os.path.isfile("DLC.activ"):
-    achievements = 30
+    achievements = 31
 else:
     achievements = 28
 script = "the game launcher.py"
@@ -146,10 +146,10 @@ def dlc2(irritation, textspeed, cringe):
                         else:
                             print("that's not a day of the week")   
                     while True:
-                        if dag != weekNamen[time]:
-                            print(weekNamen[time])
+                        if dag != weekNamen[timeee]:
+                            print(weekNamen[timeee])
                         else:
-                            print(weekNamen[time])
+                            print(weekNamen[timeee])
                             break  
                         timeee+=1
                     time.sleep(2 / textspeed)
@@ -177,6 +177,46 @@ def dlc2(irritation, textspeed, cringe):
                         know.truncate(0)
                         know.seek(0)
                         check[29]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                        exxit = 1
+                        if exxit == 1:
+                            break
+                elif "thousand" in input1[0] or input1[0]== "3":
+                    print("okay, you decide to open http://thousand.nl")
+                    time.sleep(4 / textspeed)
+                    amount = 0
+                    round = 50
+                    cheese = True
+                    while True:
+                        print(str(amount) +" + "+str(round)+" = "+str(amount+round))
+                        amount +=round
+                        round+=1
+                        time.sleep(0.5)
+                        if amount >= 1000:
+                            break
+                    print("that was intence, is it some sort of a code?")
+                    time.sleep(4 / textspeed)
+                    print("i could decrypt it")
+                    time.sleep(2 / textspeed)
+                    print("something hits your head")
+                    time.sleep(2 / textspeed)
+                    print("everything goes black")
+                    time.sleep(2 / textspeed)
+                    print("[u died]")
+                    time.sleep(2 / textspeed)
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[30] != "True":
+                        print("(there is an achievement added to achievement.txt)")
+                        time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |Never gonna give you up!| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[30]= True
                         for line in check:
                             know.write(str(line) + ";")
                         know.close()
@@ -937,7 +977,7 @@ def path2(irritation, textspeed, cringe):
             loop = False
             irritation += 10
             time.sleep(2 / textspeed)
-        elif "computer" in input1[0]:
+        elif "computer" in input1[0] or "pc" in input1[0]:
             print("is there a computer here")
             time.sleep(3 / textspeed)
             if os.path.isfile("DLC.activ"):
@@ -982,7 +1022,9 @@ def path2(irritation, textspeed, cringe):
             time.sleep(2 / textspeed)
         else:
             print("i didn't get that, please be clearer, keywords like 'annoy you' and 'nothing' and 'computer' will work")
-            time.sleep(5 / textspeed)
+            time.sleep(3 / textspeed)
+    if exxit == 1:
+        return
     print("so what is your plan? not making me happy?")
     time.sleep(5 / textspeed)
     print("well if it is, it defenitely works")
@@ -1485,8 +1527,11 @@ while playLoop == True:
             for x in range(0, achievements - knowingLength):
                 know.write("False;") 
         for x in range(0,achievements):
-            if knowing[x] == "True":
-                percentage += 1
+            if len(knowing) > x:
+                if knowing[x] == "True":
+                    percentage += 1
+            
+
     else:
         know = open("knowledge.txt", "x")
         for x in range(0,achievements):
