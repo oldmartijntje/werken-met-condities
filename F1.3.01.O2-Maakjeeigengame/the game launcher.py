@@ -7,7 +7,7 @@ from datetime import date
 import webbrowser
 
 if os.path.isfile("DLC.activ"):
-    achievements = 32
+    achievements = 35
 else:
     achievements = 28
 script = "the game launcher.py"
@@ -352,10 +352,84 @@ def dlc2(irritation, textspeed, cringe):
                                 time.sleep(4 / textspeed)
                                 print("the person is defenitely dead")
                                 time.sleep(3 / textspeed)
+                                print("you look at the house you were in")
+                                time.sleep(3 / textspeed)
+                                print("you see someone looking at you, next to the pc you were using")
+                                time.sleep(4 / textspeed)
+                                print("he notices that you noticed him, and runs away")
+                                time.sleep(4 / textspeed)
+                                print("what the-")
+                                time.sleep(1 / textspeed)
+                                print("you decide to walk towards the house")
+                                time.sleep(3 / textspeed)
+                                print("you feel a sudden pain in your head")
+                                time.sleep(3 / textspeed)
+                                print("you hear the sound of a sniper whilst you fall down")
+                                time.sleep(4 / textspeed)
+                                print("i have been sniped")
+                                time.sleep(3 / textspeed)
+                                know = open("knowledge.txt", "r+")
+                                check = know.read().split(";")
+                                if check[32] != "True":
+                                    print("(there is an achievement added to achievement.txt)")
+                                    time.sleep(4)
+                                    achievement=open("achievements.txt", "a+")
+                                    achievement.write("\n |There is something weird going on here| " +str(datetime.datetime.now()))
+                                    achievement.close()
+                                    know.truncate(0)
+                                    know.seek(0)
+                                    check[32]= True
+                                    for line in check:
+                                        know.write(str(line) + ";")
+                                    know.close()
+                                    exxit = 1
+                                    if exxit == 1:
+                                        break
                             elif "http" in url:
                                 webbrowser.open(url)
+                                know = open("knowledge.txt", "r+")
+                                check = know.read().split(";")
+                                if check[33] != "True":
+                                    print("(there is an achievement added to achievement.txt)")
+                                    time.sleep(4)
+                                    achievement=open("achievements.txt", "a+")
+                                    achievement.write("\n |Entering Browser Mode| " +str(datetime.datetime.now()))
+                                    achievement.close()
+                                    know.truncate(0)
+                                    know.seek(0)
+                                    check[33]= True
+                                    for line in check:
+                                        know.write(str(line) + ";")
+                                    know.close()
+                                exxit = 1
+                                if exxit == 1:
+                                    break
                             else:
-                                webbrowser.open("https://"+url)
+                                webbrowser.open("https://www.google.com/search?client=opera-gx&q="+url+"&sourceid=opera&ie=UTF-8&oe=UTF-8")
+                                know = open("knowledge.txt", "r+")
+                                check = know.read().split(";")
+                                if check[34] != "True":
+                                    print("(there is an achievement added to achievement.txt)")
+                                    time.sleep(4)
+                                    achievement=open("achievements.txt", "a+")
+                                    achievement.write("\n |Wow, i browsed for a word!| " +str(datetime.datetime.now()))
+                                    achievement.close()
+                                    know.truncate(0)
+                                    know.seek(0)
+                                    check[34]= True
+                                    for line in check:
+                                        know.write(str(line) + ";")
+                                    know.close()
+                                exxit = 1
+                                if exxit == 1:
+                                    break
+                        elif "bookmark" in input1[0] or "saved" in input1[0]:
+                            print("e")
+                            time.sleep(3/textspeed)
+
+
+                    if exxit == 1:
+                        break
                     
                     
 
