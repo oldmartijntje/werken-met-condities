@@ -5,9 +5,10 @@ import os.path
 import datetime
 from datetime import date
 import webbrowser
+import random
 
 if os.path.isfile("DLC.activ"):
-    achievements = 35
+    achievements = 37
 else:
     achievements = 28
 script = "the game launcher.py"
@@ -90,8 +91,80 @@ def dlc2(irritation, textspeed, cringe):
             textspeed = float(input1[1])
             print(f"someGoodSpeedChangeFeedback {textspeed}")
         elif "else" in input1[0]:
-            print("okay, what do you want to open?")
+            print("there are 5 unnamed python scripts")
             time.sleep(3 / textspeed)
+            while loop1 == True:
+                print("\nwhich one do you want to open?")
+                input1 = input(">>>").split('.',1)
+                if input1[0] == "speed":
+                    textspeed = float(input1[1])
+                    print(f"someGoodSpeedChangeFeedback {textspeed}")
+                elif input1[0] == "1":
+                    print("okay, let's open the first one")
+                    time.sleep(3 / textspeed)
+                    def addition(number1:int=10, number2:int=12):
+                        print(f"{number1} + {number2} = "+str(number1+number2))
+                    def subtraction(number1:int=58, number2:int=34):
+                        print(f"{number1} - {number2} = "+str(number1-number2))
+                    def multiplication(number1:int=6, number2:int=7):
+                        print(f"{number1} x {number2} = "+str(number1*number2))
+                    def division(number1:int=144, number2:int=12):
+                        print(f"{number1} : {number2} = "+str(number1/number2))
+                    def increment(number:int=12):
+                        print(f"{number} + 1 = "+str(number+1))
+                    def decrement(number:int=34):
+                        print(f"{number} - 1 = "+str(number-1))
+                    for x in range (1,4):
+                        addition(random.randint(0, 69),random.randint(0, 69))
+                        subtraction(random.randint(0, 69),random.randint(0, 69))
+                        multiplication(random.randint(0, 69),random.randint(0, 69))
+                        division(random.randint(0, 69),random.randint(1, 69))
+                        increment(random.randint(0, 69))
+                        decrement(random.randint(0, 69))
+                    print("\nyeah okay that is random")
+                    time.sleep(3 / textspeed)
+                    print("let's try another app shall we?")
+                    time.sleep(3 / textspeed)
+                elif input1[0] == "2":
+                    print("okay, let's open the second one")
+                    time.sleep(3 / textspeed)
+                    def helloWorld(num:int=1):
+                        for x in range(1, num+1):
+                            print(f"{x}.hello World!")
+                    helloWorld(int(input("it asks 'how many times?'")))
+                    print("\nyeah okay that is random")
+                    time.sleep(3 / textspeed)
+                    print("hmm okay let's open another one")
+                    time.sleep(3 / textspeed)
+                    print("suddenly something grabs you by your neck")
+                    time.sleep(3 / textspeed)
+                    print("you feel something sharp cutting into your skin")
+                    time.sleep(4 / textspeed)
+                    print("it's efenitely a knife")
+                    time.sleep(3 / textspeed)
+                    print("it slices through your skin")
+                    time.sleep(3 / textspeed)
+                    print("you feel an immense pain whilst u drift away")
+                    time.sleep(3 / textspeed)
+                    print("[u died]")
+                    time.sleep(3 / textspeed)
+                    know = open("knowledge.txt", "r+")
+                    check = know.read().split(";")
+                    if check[36] != "True":
+                        print("(there is an achievement added to achievement.txt)")
+                        time.sleep(4)
+                        achievement=open("achievements.txt", "a+")
+                        achievement.write("\n |Weird python script| " +str(datetime.datetime.now()))
+                        achievement.close()
+                        know.truncate(0)
+                        know.seek(0)
+                        check[36]= True
+                        for line in check:
+                            know.write(str(line) + ";")
+                        know.close()
+                        exxit = 1
+                        if exxit == 1:
+                            break
         elif "web" in input1[0] or "browser" in input1[0] or "site" in input1[0]:
             print("there are 4 websites opened")
             time.sleep(3 / textspeed)
@@ -304,7 +377,7 @@ def dlc2(irritation, textspeed, cringe):
                         elif "google" in input1[0] or "yahoo" in input1[0]:
                             print("okay, you decide to open a search engine")
                             time.sleep(3/textspeed)
-                            print("enter a URL")
+                            print("what do you put into the search engine?\n(url's work, words also work")
                             url = input()
                             if "https://nl.wikipedia.org/wiki/Rij_van_Fibonacci" in url or ("wikipedia" in url and "fibonacci" in url):
                                 print("you decide to open the wikipedia page of Fibonacci")
@@ -424,14 +497,76 @@ def dlc2(irritation, textspeed, cringe):
                                 if exxit == 1:
                                     break
                         elif "bookmark" in input1[0] or "saved" in input1[0]:
-                            print("e")
+                            print("let's open the bookmarked websites")
+                            time.sleep(3/textspeed)
+                            print("hey that's weird, there is only one")
+                            time.sleep(3/textspeed)
+                            print("https://TARP.com")
+                            time.sleep(3/textspeed)
+                            print("let's open the website")
+                            time.sleep(3/textspeed)
+                            print("hmm what is here")
+                            time.sleep(2/textspeed)
+                            print("TARP, Time Avengers Recruitment Program")
+                            time.sleep(3/textspeed)
+                            print("oh what have i gotten myself into")
+                            time.sleep(4/textspeed)
+                            print("let's continue reading")
+                            time.sleep(3/textspeed)
+                            print("hmm there is an adress")
+                            time.sleep(3/textspeed)
+                            print("RonnaldRoad 24st")
+                            time.sleep(3/textspeed)
+                            print("let's get out there i guess")
+                            time.sleep(4/textspeed)
+                            print("whilst you run down the stairs, you wall down the stairs")
+                            time.sleep(5/textspeed)
+                            print("you pick yourself up from the ground")
+                            time.sleep(4/textspeed)
+                            print("you walk outside, and get into your car")
+                            time.sleep(3/textspeed)
+                            print("eww it smells like shit in here")
+                            time.sleep(3/textspeed)
+                            print("when you try to startup the car, u hear a beep")
+                            time.sleep(4/textspeed)
+                            print("you wait, and here the beep again")
+                            time.sleep(3/textspeed)
+                            print("the beep keeps going faster")
+                            time.sleep(3/textspeed)
+                            print("the car explodes")
+                            time.sleep(3/textspeed)
+                            print("[u died]")
+                            time.sleep(3/textspeed)
+                            know = open("knowledge.txt", "r+")
+                            check = know.read().split(";")
+                            if check[35] != "True":
+                                print("(there is an achievement added to achievement.txt)")
+                                time.sleep(4)
+                                achievement=open("achievements.txt", "a+")
+                                achievement.write("\n |TARP: RonnaldRoad 24st| " +str(datetime.datetime.now()))
+                                achievement.close()
+                                know.truncate(0)
+                                know.seek(0)
+                                check[35]= True
+                                for line in check:
+                                    know.write(str(line) + ";")
+                                know.close()
+                            exxit = 1
+                            if exxit == 1:
+                                break
+                        else:
+                            print("i didn't get that as an option, try 'bookmarks' or 'google'")
                             time.sleep(3/textspeed)
 
 
                     if exxit == 1:
                         break
-                    
-                    
+                else:
+                    print("hmm, i didn't get that, try something like 'something else' or 1,2,3 or 4")
+                    time.sleep(4/textspeed)   
+        else:
+            print("i don't think that is an option, try som ething like 'website' or 'soething else'")
+            time.sleep(3/textspeed)             
 
                         
             if exxit == 1:
@@ -1887,8 +2022,4 @@ while playLoop == True:
             replayAskLoop = False
         elif reopenQuestion.lower() == "n":
             playLoop =False
-            replayAskLoop = False
-    
-        
-    
-        
+            replayAskLoop = False     
